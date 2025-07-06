@@ -52,3 +52,6 @@ wp-config.php
 
 # Node
 /wp2025/wp-content/themes/utrading/node_modules/
+
+# Mac
+.DS_Store
