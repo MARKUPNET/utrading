@@ -21,7 +21,7 @@ get_header();
 
             <div class="entry-content">
 
-                <section class="ut_block ut_block_news">
+                <section id="news" class="ut_block ut_block_news">
                     <h2 class="ut_block_title_h2"><span class="en">News</span><span class="ja">新着情報</span></h2>
                     <div class="ut_block_content">
                         <ul class="news_list">
@@ -74,7 +74,7 @@ get_header();
                     </div>
                 </section>
 
-                <section class="ut_block ut_block_about">
+                <section id="about" class="ut_block ut_block_about">
                     <h2 class="ut_block_title_h2"><span class="en">U-TRADING</span><span class="ja">U-TRADINGとは</span></h2>
                     <div class="ut_block_content">
                         <div class="row">
@@ -84,50 +84,54 @@ get_header();
                                     <img src="<?php echo get_template_directory_uri(); ?>/images/img_41695663.jpg" alt="イメージ画像 U-TRADINGとは">
                                 </picture>
                             </div>
-                            <div class="col-12 col-md-6">
+                            <div class="col-12 col-md-6 mt-3 mt-md-0">
                                 <p class="lead_text">ここに文章を入力します。ここに文章を入力します。ここに文章を入力します。ここに文章を入力します。ここに文章を入力します。ここに文章を入力します。ここに文章を入力します。</p>
-                                <a hrf="#">詳しく見る</a>
+                                <div class="d-flex justify-content-end">
+                                    <a href="#" class="btn btn-success">詳しく見る</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </section>
 
-                <section class="ut_block ut_block_service">
+                <section id="service" class="ut_block ut_block_service ut_service">
                     <h2 class="ut_block_title_h2"><span class="en">Service</span><span class="ja">事業案内</span></h2>
                     <div class="ut_block_content">
                         <p class="lead_text">ここに文章を入力します。ここに文章を入力します。ここに文章を入力します。ここに文章を入力します。ここに文章を入力します。ここに文章を入力します。ここに文章を入力します。</p>
-                        <a hrf="#">詳しく見る</a>
-                        <div class="ut_service_list">
+                        <div class="d-flex justify-content-end">
+                            <a href="#" class="btn btn-success">詳しく見る</a>
+                        </div>
+                        <div class="ut_service_list mt-5">
                             <div class="row justify-content-center">
-                                <div class="col-6 col-md-4">
-                                    <div class="ut_service_item">
+                                <div class="col-12 col-md-4">
+                                    <a href="#" class="ut_service_item">
                                         <i class="fa-solid fa-spray-can-sparkles"></i>
-                                        <span>板金塗装</span>
-                                    </div>
+                                        <h3>板金塗装</h3>
+                                    </a>
                                 </div>
-                                <div class="col-6 col-md-4">
-                                    <div class="ut_service_item">
+                                <div class="col-12 col-md-4">
+                                    <a href="#" class="ut_service_item">
                                         <i class="fa-solid fa-gauge-high"></i>
-                                        <span>車検・点検</span>
-                                    </div>
+                                        <h3>車検・点検</h3>
+                                    </a>
                                 </div>
-                                <div class="col-6 col-md-4">
-                                    <div class="ut_service_item">
+                                <div class="col-12 col-md-4">
+                                    <a href="#" class="ut_service_item">
                                         <i class="fa-solid fa-car-side"></i>
-                                        <span>新車・中古車販売</span>
-                                    </div>
+                                        <h3>新車・中古車販売</h3>
+                                    </a>
                                 </div>
-                                <div class="col-6 col-md-4">
-                                    <div class="ut_service_item">
+                                <div class="col-12 col-md-4">
+                                    <a href="#" class="ut_service_item">
                                         <i class="fa-solid fa-spray-can-sparkles"></i>
-                                        <span>ロードサービス</span>
-                                    </div>
+                                        <h3>ロードサービス</h3>
+                                    </a>
                                 </div>
-                                <div class="col-6 col-md-4">
-                                    <div class="ut_service_item">
+                                <div class="col-12 col-md-4">
+                                    <a href="#" class="ut_service_item">
                                         <i class="fa-solid fa-spray-can-sparkles"></i>
-                                        <span>ガラスコーティング</span>
-                                    </div>
+                                        <h3>ガラスコーティング</h3>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -218,29 +222,31 @@ get_header();
                     </div>
                 </section>
 
-                <section class="ut_block ut_block_company">
+                <section id="company" class="ut_block ut_block_company ut_company">
                     <h2 class="ut_block_title_h2"><span class="en">Company</span><span class="ja">会社案内</span></h2>
                     <div class="ut_block_content">
-                        <div class="d-flex">
-                            <div class="col-4">
-                                <a href="#"><span class="en">Message</span><span class="ja">ご挨拶</span></a>
+                        <div class="row">
+                            <div class="col-12 col-md-4">
+                                <a href="#" class="ut_company_item"><span class="en">Message</span><span class="ja">ご挨拶</span></a>
                             </div>
-                            <div class="col-4">
-                                <a href="#"><span class="en">Profile</span><span class="ja">会社概要</span></a>
+                            <div class="col-12 col-md-4">
+                                <a href="#" class="ut_company_item"><span class="en">Profile</span><span class="ja">会社概要</span></a>
                             </div>
-                            <div class="col-4">
-                                <a href="#"><span class="en">Access</span><span class="ja">アクセス</span></a>
+                            <div class="col-12 col-md-4">
+                                <a href="#" class="ut_company_item"><span class="en">Access</span><span class="ja">アクセス</span></a>
                             </div>
                         </div>
                     </div>
                 </section>
 
-                <section class="ut_block ut_block_faq">
+                <section id="faq" class="ut_block ut_block_faq ut_faq">
                     <h2 class="ut_block_title_h2"><span class="en">Faq</span><span class="ja">よくある質問</span></h2>
                     <div class="ut_block_content">
                         <p class="lead_text">ここに文章を入力します。ここに文章を入力します。ここに文章を入力します。ここに文章を入力します。ここに文章を入力します。ここに文章を入力します。ここに文章を入力します。</p>
-                        <a hrf="#">詳しく見る</a>
-                        <div class="ut_faq_list">
+                        <div class="d-flex justify-content-end">
+                            <a href="#" class="btn btn-success">詳しく見る</a>
+                        </div>
+                        <div class="ut_faq_list mt-5">
                             <dl class="ut_faq_item">
                                 <dt>施工時間はどれくらいかかりますか？</dt>
                                 <dd>ここに文章を入力します。ここに文章を入力します。ここに文章を入力します。ここに文章を入力します。</dd>
@@ -280,7 +286,7 @@ get_header();
                                 <p>011-788-9483</p>
                             </div>
                             <div>
-                                <a href="#">メールでお問い合わせ</a>
+                                <a href="#" class="btn btn-success">メールでお問い合わせ</a>
                             </div>
                         </div>
                     </div>
@@ -289,7 +295,7 @@ get_header();
 
             <footer class="entry-footer">
 
-                <p>ここにバナーなど</p>
+                <p>Instagramはこちら→</p>
 
             </footer>
 

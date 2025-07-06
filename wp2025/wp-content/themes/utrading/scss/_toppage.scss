@@ -109,3 +109,107 @@
         padding: 40px 0;
     }
 }
+
+.ut_service{
+
+    &_list{
+
+    }
+
+    &_item{
+        display: flex;
+        align-items: center;
+        margin: 10px 0;
+        padding: 30px;
+        text-align: center;
+        background-color: var(--ut-white);
+        border: 1px solid var(--ut-green);
+        border-radius: 6px;
+        transition: all 0.3s ease;
+
+        &:hover{
+            color: var(--ut-white);
+            background-color: var(--ut-green);
+            
+            i{
+                color: var(--ut-white);
+            }
+
+            h3{
+                color: var(--ut-white);
+            }
+        }
+
+        i{
+            color: var(--ut-green);
+            font-size: 40px;
+        }
+
+        h3{
+            width: 100%;
+            font-size: 18px;
+            font-weight: 700;
+            text-align: center;
+        }
+    }
+}
+
+.ut_company{
+
+    &_item{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        margin: 10px 0;
+        width: 100%;
+        text-align: center;
+        border: 1px solid var(--ut-green);
+
+        .en{
+            display: block;
+            width: 100%;
+            color: var(--ut-green);
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .ja{
+            display: block;
+            width: 100%;
+            color: var(--ut-green);
+            font-size: 14px;
+        }
+    }
+}
+
+.ut_faq{
+
+
+    &_item{
+
+        dt{
+
+            &::before{
+                content: "Q.";
+                margin-right: 5px;
+                color: var(--ut-green);
+                font-family: $font-alike;
+                font-size: 24px;
+                font-weight: 700;
+            }
+        }
+
+        dd{
+
+            &::before{
+                content: "A.";
+                margin-right: 5px;
+                color: var(--ut-red);
+                font-family: $font-alike;
+                font-size: 24px;
+                font-weight: 700;
+            }
+        }
+    }
+}
