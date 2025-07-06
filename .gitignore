@@ -50,4 +50,5 @@ wp-config.php
 # VScode
 /.vscode
 
+# Node
 /wp2025/wp-content/themes/utrading/node_modules/
