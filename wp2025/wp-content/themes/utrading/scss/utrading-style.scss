@@ -1,0 +1,23 @@
+@import "reset";
+@import 'variables';
+@import 'icons';
+@import 'default';
+@import 'pagination';
+@import 'breadcrumb';
+
+body{
+    color: var(--ut-black);
+    font-family: $font-sans-jp;
+    font-size: 14px;
+    line-height: 1.75;
+    background-color: var(--ut-white);
+    @media screen and (min-width: 768px) {
+        font-size: 16px;
+        line-height: 1.75;
+    }
+}
+
+@import "header";
+@import "footer";
+
+@import "toppage";

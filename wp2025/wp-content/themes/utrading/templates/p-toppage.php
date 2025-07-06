@@ -1,0 +1,303 @@
+<?php
+/**
+ * Template name: トップページ
+ */
+
+get_header();
+?>
+<div id="content" class="site-content">
+
+    <main id="main" class="site-main" role="main">
+
+        <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+            <div class="entry-header">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/img_57213860.webp" alt="株式会社 U-TRADING" width="1980" height="1300">
+                <div class="mainvisual_textwrapper">
+                    <h1 class="toppage_title">株式会社 U-TRADING</h1>
+                    <p>未来をつなぐ</p>
+                </div>
+            </div>
+
+            <div class="entry-content">
+
+                <section class="ut_block ut_block_news">
+                    <h2 class="ut_block_title_h2"><span class="en">News</span><span class="ja">新着情報</span></h2>
+                    <div class="ut_block_content">
+                        <ul class="news_list">
+                            <li class="news_item">
+                                <a href="#">
+                                    <div class="news_meta">
+                                        <span class="news_date">2025-07-01</span>
+                                        <span class="news_category news">お知らせ</span>
+                                    </div>
+                                    <span class="news_text">ホームページを開設しました</span>
+                                </a>
+                            </li>
+                            <li class="news_item">
+                                <a href="#">
+                                    <div class="news_meta">
+                                        <span class="news_date">2025-06-10</span>
+                                        <span class="news_category usedcar">入荷情報</span>
+                                    </div>
+                                    <span class="news_text">アルファード入荷しました。</span>
+                                </a>
+                            </li>
+                            <li class="news_item">
+                                <a href="#">
+                                    <div class="news_meta">
+                                        <span class="news_date">2025-05-10</span>
+                                        <span class="news_category usedcar">入荷情報</span>
+                                    </div>
+                                    <span class="news_text">ベルファイア入荷しました</span>
+                                </a>
+                            </li>
+                            <li class="news_item">
+                                <a href="#">
+                                    <div class="news_meta">
+                                        <span class="news_date">2025-04-10</span>
+                                        <span class="news_category usedcar">入荷情報</span>
+                                    </div>
+                                    <span class="news_text">トライトン入荷しました</span>
+                                </a>
+                            </li>
+                            <li class="news_item">
+                                <a href="#">
+                                    <div class="news_meta">
+                                        <span class="news_date">2024-12-01</span>
+                                        <span class="news_category news">お知らせ</span>
+                                    </div>
+                                    <span class="news_text">年末年始（12/28-1/6）はお休みします</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="ut_block ut_block_about">
+                    <h2 class="ut_block_title_h2"><span class="en">U-TRADING</span><span class="ja">U-TRADINGとは</span></h2>
+                    <div class="ut_block_content">
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+                                <picture>
+                                    <source srcset="" media="(min-width: 768px)">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/images/img_41695663.jpg" alt="イメージ画像 U-TRADINGとは">
+                                </picture>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <p class="lead_text">ここに文章を入力します。ここに文章を入力します。ここに文章を入力します。ここに文章を入力します。ここに文章を入力します。ここに文章を入力します。ここに文章を入力します。</p>
+                                <a hrf="#">詳しく見る</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="ut_block ut_block_service">
+                    <h2 class="ut_block_title_h2"><span class="en">Service</span><span class="ja">事業案内</span></h2>
+                    <div class="ut_block_content">
+                        <p class="lead_text">ここに文章を入力します。ここに文章を入力します。ここに文章を入力します。ここに文章を入力します。ここに文章を入力します。ここに文章を入力します。ここに文章を入力します。</p>
+                        <a hrf="#">詳しく見る</a>
+                        <div class="ut_service_list">
+                            <div class="row justify-content-center">
+                                <div class="col-6 col-md-4">
+                                    <div class="ut_service_item">
+                                        <i class="fa-solid fa-spray-can-sparkles"></i>
+                                        <span>板金塗装</span>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4">
+                                    <div class="ut_service_item">
+                                        <i class="fa-solid fa-gauge-high"></i>
+                                        <span>車検・点検</span>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4">
+                                    <div class="ut_service_item">
+                                        <i class="fa-solid fa-car-side"></i>
+                                        <span>新車・中古車販売</span>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4">
+                                    <div class="ut_service_item">
+                                        <i class="fa-solid fa-spray-can-sparkles"></i>
+                                        <span>ロードサービス</span>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4">
+                                    <div class="ut_service_item">
+                                        <i class="fa-solid fa-spray-can-sparkles"></i>
+                                        <span>ガラスコーティング</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="ut_block ut_block_works">
+                    <h2 class="ut_block_title_h2"><span class="en">Works</span><span class="ja">施工実績</span></h2>
+                    <div class="ut_block_content">
+                        <div class="row">
+                            <div class="col">
+                                <div id="carouselWorks" class="carousel slide" data-ride="carousel">
+                                    <div class="carousel-indicators">
+                                        <button type="button" data-bs-target="#carouselWorks" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                        <button type="button" data-bs-target="#carouselWorks" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                        <button type="button" data-bs-target="#carouselWorks" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                        <button type="button" data-bs-target="#carouselWorks" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                                    </div>
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <div class="card">
+                                                <div class="card-header">
+                                                    <picture>
+                                                        <source srcset="">
+                                                        <img src="<?php echo get_template_directory_uri(); ?>/images/img_111587379.webp" alt="">
+                                                    </picture>
+                                                </div>
+                                                <div class="card-body">
+                                                    <h3>施工タイトル</h3>
+                                                    <p>ここに文章を入れます。ここに文章を入れます。ここに文章を入れます。ここに文章を入れます。</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <div class="card">
+                                                <div class="card-header">
+                                                    <picture>
+                                                        <source srcset="">
+                                                        <img src="<?php echo get_template_directory_uri(); ?>/images/img_115628367.webp" alt="">
+                                                    </picture>
+                                                </div>
+                                                <div class="card-body">
+                                                    <h3>施工タイトル</h3>
+                                                    <p>ここに文章を入れます。ここに文章を入れます。ここに文章を入れます。ここに文章を入れます。</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <div class="card">
+                                                <div class="card-header">
+                                                    <picture>
+                                                        <source srcset="">
+                                                        <img src="<?php echo get_template_directory_uri(); ?>/images/img_117184381.webp" alt="">
+                                                    </picture>
+                                                </div>
+                                                <div class="card-body">
+                                                    <h3>施工タイトル</h3>
+                                                    <p>ここに文章を入れます。ここに文章を入れます。ここに文章を入れます。ここに文章を入れます。</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <div class="card">
+                                                <div class="card-header">
+                                                    <picture>
+                                                        <source srcset="">
+                                                        <img src="<?php echo get_template_directory_uri(); ?>/images/img_124798896.webp" alt="">
+                                                    </picture>
+                                                </div>
+                                                <div class="card-body">
+                                                    <h3>施工タイトル</h3>
+                                                    <p>ここに文章を入れます。ここに文章を入れます。ここに文章を入れます。ここに文章を入れます。</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="sr-only">Previous</span>
+                                        </a>
+                                        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="sr-only">Next</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="ut_block ut_block_company">
+                    <h2 class="ut_block_title_h2"><span class="en">Company</span><span class="ja">会社案内</span></h2>
+                    <div class="ut_block_content">
+                        <div class="d-flex">
+                            <div class="col-4">
+                                <a href="#"><span class="en">Message</span><span class="ja">ご挨拶</span></a>
+                            </div>
+                            <div class="col-4">
+                                <a href="#"><span class="en">Profile</span><span class="ja">会社概要</span></a>
+                            </div>
+                            <div class="col-4">
+                                <a href="#"><span class="en">Access</span><span class="ja">アクセス</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="ut_block ut_block_faq">
+                    <h2 class="ut_block_title_h2"><span class="en">Faq</span><span class="ja">よくある質問</span></h2>
+                    <div class="ut_block_content">
+                        <p class="lead_text">ここに文章を入力します。ここに文章を入力します。ここに文章を入力します。ここに文章を入力します。ここに文章を入力します。ここに文章を入力します。ここに文章を入力します。</p>
+                        <a hrf="#">詳しく見る</a>
+                        <div class="ut_faq_list">
+                            <dl class="ut_faq_item">
+                                <dt>施工時間はどれくらいかかりますか？</dt>
+                                <dd>ここに文章を入力します。ここに文章を入力します。ここに文章を入力します。ここに文章を入力します。</dd>
+                            </dl>
+                            <dl class="ut_faq_item">
+                                <dt>施工価格を教えてください。</dt>
+                                <dd>ここに文章を入力します。ここに文章を入力します。ここに文章を入力します。ここに文章を入力します。</dd>
+                            </dl>
+                            <dl class="ut_faq_item">
+                                <dt>ここに質問文章</dt>
+                                <dd>ここに文章を入力します。ここに文章を入力します。ここに文章を入力します。ここに文章を入力します。</dd>
+                            </dl>
+                            <dl class="ut_faq_item">
+                                <dt>ここに質問文章</dt>
+                                <dd>ここに文章を入力します。ここに文章を入力します。ここに文章を入力します。ここに文章を入力します。</dd>
+                            </dl>
+                            <dl class="ut_faq_item">
+                                <dt>ここに質問文章</dt>
+                                <dd>ここに文章を入力します。ここに文章を入力します。ここに文章を入力します。ここに文章を入力します。</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="ut_block menu_001">
+                    <h2 class="ut_block_title_h2"><span class="en">Contact us</span><span class="ja">お問い合わせ</span></h2>
+                    <div class="ut_block_content">
+                        <div>
+                            <div>
+                                <h3>定休日</h3>
+                                <p>年中無休</p>
+                                <h3>営業時間</h3>
+                                <p>10:00 - 19:00</p>
+                            </div>
+                            <div>
+                                <h3>電話でお問い合わせ</h3>
+                                <p>011-788-9483</p>
+                            </div>
+                            <div>
+                                <a href="#">メールでお問い合わせ</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <footer class="entry-footer">
+
+                <p>ここにバナーなど</p>
+
+            </footer>
+
+        </article>
+
+    </main>
+
+</div>
+<?php
+get_footer();
+?>
