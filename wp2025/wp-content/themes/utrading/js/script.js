@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // ut_blockが画面内に入ったらactiveクラスをトグル
-    const utBlocks = document.querySelectorAll('.ut_block');
+    const utBlocks = document.querySelectorAll('.ut_block, .ut_scroll');
     if ('IntersectionObserver' in window) {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {

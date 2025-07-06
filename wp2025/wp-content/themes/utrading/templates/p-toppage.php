@@ -22,7 +22,7 @@ get_header();
             <div class="entry-content">
 
                 <section id="news" class="ut_block ut_block_news">
-                    <h2 class="ut_block_title_h2"><span class="en">News</span><span class="ja">新着情報</span></h2>
+                    <h2 class="ut_block_title_h2 d-flex align-items-start flex-column"><span class="en">News</span><span class="ja">新着情報</span></h2>
                     <div class="ut_block_content">
                         <ul class="news_list">
                             <li class="news_item">
@@ -75,11 +75,11 @@ get_header();
                 </section>
 
                 <section id="about" class="ut_block ut_block_about">
-                    <h2 class="ut_block_title_h2"><span class="en">U-TRADING</span><span class="ja">U-TRADINGとは</span></h2>
+                    <h2 class="ut_block_title_h2 d-flex align-items-start flex-column"><span class="en">U-TRADING</span><span class="ja">U-TRADINGとは</span></h2>
                     <div class="ut_block_content">
                         <div class="row">
                             <div class="col-12 col-md-6">
-                                <picture>
+                                <picture class="ut_scroll fade-in">
                                     <source srcset="" media="(min-width: 768px)">
                                     <img src="<?php echo get_template_directory_uri(); ?>/images/img_41695663.jpg" alt="イメージ画像 U-TRADINGとは">
                                 </picture>
@@ -95,13 +95,13 @@ get_header();
                 </section>
 
                 <section id="service" class="ut_block ut_block_service ut_service">
-                    <h2 class="ut_block_title_h2"><span class="en">Service</span><span class="ja">事業案内</span></h2>
+                    <h2 class="ut_block_title_h2 d-flex align-items-start flex-column"><span class="en">Service</span><span class="ja">事業案内</span></h2>
                     <div class="ut_block_content">
                         <p class="lead_text">ここに文章を入力します。ここに文章を入力します。ここに文章を入力します。ここに文章を入力します。ここに文章を入力します。ここに文章を入力します。ここに文章を入力します。</p>
                         <div class="d-flex justify-content-end">
                             <a href="#" class="btn btn-success">詳しく見る</a>
                         </div>
-                        <div class="ut_service_list mt-5">
+                        <div class="ut_service_list ut_scroll fade-in">
                             <div class="row justify-content-center">
                                 <div class="col-12 col-md-4">
                                     <a href="#" class="ut_service_item">
@@ -139,7 +139,7 @@ get_header();
                 </section>
 
                 <section class="ut_block ut_block_works">
-                    <h2 class="ut_block_title_h2"><span class="en">Works</span><span class="ja">施工実績</span></h2>
+                    <h2 class="ut_block_title_h2 d-flex align-items-start flex-column"><span class="en">Works</span><span class="ja">施工実績</span></h2>
                     <div class="ut_block_content">
                         <div class="row">
                             <div class="col">
@@ -223,30 +223,32 @@ get_header();
                 </section>
 
                 <section id="company" class="ut_block ut_block_company ut_company">
-                    <h2 class="ut_block_title_h2"><span class="en">Company</span><span class="ja">会社案内</span></h2>
+                    <h2 class="ut_block_title_h2 d-flex align-items-start flex-column"><span class="en">Company</span><span class="ja">会社案内</span></h2>
                     <div class="ut_block_content">
-                        <div class="row">
-                            <div class="col-12 col-md-4">
-                                <a href="#" class="ut_company_item"><span class="en">Message</span><span class="ja">ご挨拶</span></a>
-                            </div>
-                            <div class="col-12 col-md-4">
-                                <a href="#" class="ut_company_item"><span class="en">Profile</span><span class="ja">会社概要</span></a>
-                            </div>
-                            <div class="col-12 col-md-4">
-                                <a href="#" class="ut_company_item"><span class="en">Access</span><span class="ja">アクセス</span></a>
+                        <div class="ut_company_list ut_scroll fade-in">
+                            <div class="row">
+                                <div class="col-12 col-md-4">
+                                    <a href="#" class="ut_company_item"><span class="en">Message</span><span class="ja">ご挨拶</span></a>
+                                </div>
+                                <div class="col-12 col-md-4">
+                                    <a href="#" class="ut_company_item"><span class="en">Profile</span><span class="ja">会社概要</span></a>
+                                </div>
+                                <div class="col-12 col-md-4">
+                                    <a href="#" class="ut_company_item"><span class="en">Access</span><span class="ja">アクセス</span></a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </section>
 
                 <section id="faq" class="ut_block ut_block_faq ut_faq">
-                    <h2 class="ut_block_title_h2"><span class="en">Faq</span><span class="ja">よくある質問</span></h2>
+                    <h2 class="ut_block_title_h2 d-flex align-items-start flex-column"><span class="en">Faq</span><span class="ja">よくある質問</span></h2>
                     <div class="ut_block_content">
                         <p class="lead_text">ここに文章を入力します。ここに文章を入力します。ここに文章を入力します。ここに文章を入力します。ここに文章を入力します。ここに文章を入力します。ここに文章を入力します。</p>
                         <div class="d-flex justify-content-end">
                             <a href="#" class="btn btn-success">詳しく見る</a>
                         </div>
-                        <div class="ut_faq_list mt-5">
+                        <div class="ut_faq_list ut_scroll fade-in mt-5">
                             <dl class="ut_faq_item">
                                 <dt>施工時間はどれくらいかかりますか？</dt>
                                 <dd>ここに文章を入力します。ここに文章を入力します。ここに文章を入力します。ここに文章を入力します。</dd>
@@ -272,7 +274,7 @@ get_header();
                 </section>
 
                 <section class="ut_block menu_001">
-                    <h2 class="ut_block_title_h2"><span class="en">Contact us</span><span class="ja">お問い合わせ</span></h2>
+                    <h2 class="ut_block_title_h2 d-flex align-items-start flex-column"><span class="en">Contact us</span><span class="ja">お問い合わせ</span></h2>
                     <div class="ut_block_content">
                         <div>
                             <div>

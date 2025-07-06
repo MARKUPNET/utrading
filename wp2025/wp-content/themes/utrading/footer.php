@@ -34,9 +34,9 @@
                                 <p class="footer_information_company_logo"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="株式会社 U-TRADING" width="288" height="256"></p>
                                 <p class="footer_information_company_name">株式会社 U-TRADING</p>
                             </a>
-                            <p class="footer_information_compamy_address">北海道札幌市</p>
-                            <p cclass="footer_information_company_tel">011-0000-0000</p>
-                            <p cclass="footer_information_company_fax">011-0000-0000</p>
+                            <p class="footer_information_compamy_address">〒007-0890 北海道札幌市東区中沼町80-9</p>
+                            <p cclass="footer_information_company_tel">TEL:011-788-9483</p>
+                            <p cclass="footer_information_company_fax">FAX:011-788-9484</p>
                         </div>
                     </div>
                 </div>

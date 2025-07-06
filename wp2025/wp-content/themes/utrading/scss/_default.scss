@@ -10,7 +10,7 @@ html{
 }
 
 h1,h2,h3,h4,h5,h6{
-    color: var(--bs-black);
+    color: var(--ut-black);
     font-weight: 700;
     line-height: 1.2;
 }
@@ -71,48 +71,120 @@ button{
 }
 
 .ut_block{
-    margin: 20px 0;
+    padding: 20px 0;
     position: relative;
-
     @media screen and (min-width: 768px) {
-        margin: 40px 0;
+        padding: 40px 0;
     }
-}
 
-.ut_block_title_h2{
-    margin: 0 auto 20px;
-
-    .en{
+    &::after{
+        content: "";
         display: block;
-        font-family: $font-serif-jp;
-        font-size: 24px;
-        @media screen and (min-width: 768px) {
-            font-size: 58px;
-        }
+        width: 100vw;
+        height: 1px;
+        border-top: 1px solid var(--ut-green);
+        position: absolute;
+        left: 50%;
+        top: 0;
+        opacity: 0;
+        transform: translateX(-100%);
+        transition: all 1s ease;
     }
 
-    .ja{
-        display: block;
-        margin-top: 5px;
-        font-size: 10px;
-        @media screen and (min-width: 768px) {
-            font-size: 18px;
-        }
-    }
-
-    @media screen and (min-width: 768px) {
-        margin: 0 auto 40px;
-        padding: 0 20px;
+    &_title_h2{
+        margin: 0 auto 20px;
         max-width: 1140px;
+        @media screen and (min-width: 768px) {
+            margin: 0 auto 40px;
+            padding: 0 20px;
+        }
+
+        .en{
+            font-family: $font-serif-jp;
+            font-size: 24px;
+            position: relative;
+            overflow: hidden;
+            transform: translateX(50px);
+            opacity: 0;
+            transition: all 1s ease;
+            @media screen and (min-width: 768px) {
+                font-size: 58px;
+            }
+
+            &::before{
+                content: "";
+                width: 100%;
+                height: 3px;
+                background-color: var(--ut-lightgreen);
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                z-index: 1;
+                transform: translateX(-100%);
+                transition: all 1s ease;
+            }
+
+            &::after{
+                content: "";
+                width: 60px;
+                height: 3px;
+                background-color: var(--ut-blue);
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                z-index: 2;
+                transform: translateX(-100%);
+                transition: all 3s ease;
+            }
+        }
+
+        .ja{
+            margin-top: 5px;
+            font-size: 10px;
+            transform: translateX(-50px);
+            opacity: 0;
+            transition: all 1s ease;
+            @media screen and (min-width: 768px) {
+                font-size: 18px;
+            }
+        }
     }
-}
 
-.ut_block_content{
+    &_content{
 
-    @media screen and (min-width: 768px) {
-        margin: 0 auto;
-        padding: 0 20px;
-        max-width: 1040px;
+        @media screen and (min-width: 768px) {
+            margin: 0 auto;
+            padding: 0 20px;
+            max-width: 1040px;
+        }
+    }
+
+    &.active{
+
+        &::after{
+            transform: translateX(-50%);
+            opacity: 1;
+        }
+
+        .ut_block_title_h2{
+            .en{
+                transform: translateX(0);
+                opacity: 1;
+
+                &::before{
+                    transform: translateX(0);
+                }
+
+                &::after{
+                    transform: translateX(0);
+                }
+            }
+
+            .ja{
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
     }
 }
 
@@ -122,11 +194,11 @@ button{
     justify-content: center;
     width: 60px;
     height: 60px;
-    color: var(--bs-white);
+    color: var(--ut-white);
     font-size: 18px;
     font-weight: 700;
-    background-color: var(--bs-green);
-    border: 1px solid var(--bs-white);
+    background-color: var(--ut-green);
+    border: 1px solid var(--ut-white);
     border-radius: 50%;
     position: fixed;
     right: 10px;
@@ -138,3 +210,31 @@ button{
         opacity: 1;
     }
 }
+
+.ut_scroll{
+    display: block;
+    transition: all 1s ease;
+
+    &.fade-in{
+        opacity: 0;
+    }
+
+    &.fade-in-up{
+        transform: translateY(50%);
+        opacity: 0;
+    }
+
+    &.active{
+
+        &.fade-in{
+             opacity: 1;
+       }
+
+       &.fade-in-up{
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+    }
+}
+
