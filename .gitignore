@@ -5,35 +5,35 @@
 #
 # Note: if you want to stage/commit WP core files
 # you can delete this whole section/until Configuration.
-/wp-admin/
-/wp-content/index.php
-/wp-content/languages
-/wp-content/plugins/index.php
-/wp-content/themes/index.php
-/wp-includes/
-/index.php
-/license.txt
-/readme.html
-/wp-*.php
-/xmlrpc.php
+/wp2025/wp-admin/
+/wp2025/wp-content/index.php
+/wp2025/wp-content/languages
+/wp2025/wp-content/plugins/index.php
+/wp2025/wp-content/themes/index.php
+/wp2025/wp-includes/
+/wp2025/index.php
+/wp2025/license.txt
+/wp2025/readme.html
+/wp2025/wp-*.php
+/wp2025/xmlrpc.php
 
 # Configuration
 wp-config.php
 
 # Example themes
-/wp-content/themes/twenty*/
+/wp2025/wp-content/themes/twenty*/
 
 # Example plugin
-/wp-content/plugins/hello.php
+/wp2025/wp-content/plugins/hello.php
 
 # Uploads
-/wp-content/uploads/
+/wp2025/wp-content/uploads/
 
 # Log files
 *.log
 
 # htaccess
-/.htaccess
+/wp2025/.htaccess
 
 # All plugins
 #
@@ -49,3 +49,5 @@ wp-config.php
 
 # VScode
 /.vscode
+
+/wp2025/wp-content/themes/utrading/node_modules/
