@@ -6,7 +6,6 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico" />
-<meta name="keywords" content="<?php echo $keywords; ?>"/>
 
 <!-- google font の読み込み -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -45,36 +44,33 @@
 
         <header class="site-header">
             <div class="ut_logo">
-                <a href="<?php home_url('/'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="株式会社 U-TRADING" width="288" height="256"></a>
+                <a href="<?php echo home_url('/'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="株式会社 U-TRADING" width="288" height="256"></a>
             </div>
             <div class="ut_gmenu_wrap">
                 <div class="row">
                     <div class="col-12 col-md-6">
                         <ul class="ut_gmenu_list">
                             <li class="ut_gmenu_item">
-                                <a href="<?php home_url('/'); ?>"><span class="ja">ホーム</span><span class="en">Home</span></a>
+                                <a href="<?php echo home_url('/'); ?>"><span class="ja">ホーム</span><span class="en">Home</span></a>
                             </li>
                             <li class="ut_gmenu_item">
-                                <a href="#"><span class="ja">事業案内</span><span class="en">About us</span></a>
+                                <a href="<?php echo home_url('/service'); ?>"><span class="ja">事業案内</span><span class="en">Service</span></a>
                             </li>
                             <li class="ut_gmenu_item">
-                                <a href="#"><span class="ja">施工実績</span><span class="en">Works</span></a>
+                                <a href="<?php echo home_url('/works'); ?>"><span class="ja">施工実績</span><span class="en">Works</span></a>
                             </li>
                             <li class="ut_gmenu_item">
-                                <a href="#"><span class="ja">会社案内</span><span class="en">Company</span></a>
+                                <a href="<?php echo home_url('/company'); ?>"><span class="ja">会社案内</span><span class="en">Company</span></a>
                             </li>
                         </ul>
                     </div>
                     <div class="col-12 col-md-6">
                         <ul class="ut_gmenu_list">
                             <li class="ut_gmenu_item">
-                                <a href="#"><span class="ja">採用情報</span><span class="en">Recrout</span></a>
+                                <a href="<?php echo home_url('/faq'); ?>"><span class="ja">よくある質問</span><span class="en">Faq</span></a>
                             </li>
                             <li class="ut_gmenu_item">
-                                <a href="#"><span class="ja">よくある質問</span><span class="en">Faq</span></a>
-                            </li>
-                            <li class="ut_gmenu_item">
-                                <a href="#"><span class="ja">お問い合わせ</span><span class="en">Contact</span></a>
+                                <a href="<?php echo home_url('/contact'); ?>"><span class="ja">お問い合わせ</span><span class="en">Contact</span></a>
                             </li>
                         </ul>
                     </div>
@@ -100,4 +96,3 @@
                 </div>
             </div>
         </header>
-

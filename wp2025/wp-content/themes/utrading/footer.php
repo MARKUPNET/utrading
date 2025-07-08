@@ -1,4 +1,3 @@
-        <a href="#" class="pagetop">TOP</a>
 
         <footer class="site-footer">
             <div class="inner">
@@ -8,57 +7,54 @@
                             <div class="col-12 col-md-6">
                                 <ul class="ut_fmenu_list">
                                     <li class="ut_fmenu_item">
-                                        <a href="<?php home_url('/'); ?>"><span class="ja">ホーム</span></a>
+                                        <a href="<?php echo home_url(''); ?>"><span class="ja">ホーム</span></a>
                                     </li>
                                     <li class="ut_fmenu_item">
-                                        <a href="#"><span class="ja">事業案内</span></a>
+                                        <a href="<?php echo home_url('/service'); ?>"><span class="ja">事業案内</span></a>
                                         <ul class="ut_fmenu_list_sub">
                                             <li class="ut_fmenu_item_sub">
-                                                <a href="#"><span class="ja">板金塗装</span></a>
+                                                <a href="<?php echo home_url('/service'); ?>"><span class="ja">板金塗装</span></a>
                                             </li>
                                             <li class="ut_fmenu_item_sub">
-                                                <a href="#"><span class="ja">車検・点検</span></a>
+                                                <a href="<?php echo home_url('/service'); ?>"><span class="ja">車検・点検</span></a>
                                             </li>
                                             <li class="ut_fmenu_item_sub">
-                                                <a href="#"><span class="ja">新車・中古車販売</span></a>
+                                                <a href="<?php echo home_url('/service'); ?>"><span class="ja">新車・中古車販売</span></a>
                                             </li>
                                             <li class="ut_fmenu_item_sub">
-                                                <a href="#"><span class="ja">ロードサービス</span></a>
+                                                <a href="<?php echo home_url('/service'); ?>"><span class="ja">ロードサービス</span></a>
                                             </li>
                                             <li class="ut_fmenu_item_sub">
-                                                <a href="#"><span class="ja">ガラスコーティング</span></a>
+                                                <a href="<?php echo home_url('/service'); ?>"><span class="ja">ガラスコーティング</span></a>
                                             </li>
                                         </ul>
                                     </li>
                                     <li class="ut_fmenu_item">
-                                        <a href="#"><span class="ja">施工実績</span></a>
+                                        <a href="<?php echo home_url('/works'); ?>"><span class="ja">施工実績</span></a>
                                     </li>
                                 </ul>
                             </div>
                             <div class="col-12 col-md-6">
                                 <ul class="ut_fmenu_list">
                                     <li class="ut_fmenu_item">
-                                        <a href="#"><span class="ja">会社案内</span></a>
+                                        <a href="<?php echo home_url('/company'); ?>"><span class="ja">会社案内</span></a>
                                         <ul class="ut_fmenu_list_sub">
                                             <li class="ut_fmenu_item_sub">
-                                                <a href="#"><span class="ja">ご挨拶</span></a>
+                                                <a href="<?php echo home_url('/company'); ?>"><span class="ja">ご挨拶</span></a>
                                             </li>
                                             <li class="ut_fmenu_item_sub">
-                                                <a href="#"><span class="ja">会社概要</span></a>
+                                                <a href="<?php echo home_url('/company'); ?>"><span class="ja">会社概要</span></a>
                                             </li>
                                             <li class="ut_fmenu_item_sub">
-                                                <a href="#"><span class="ja">アクセス</span></a>
+                                                <a href="<?php echo home_url('/company'); ?>"><span class="ja">アクセス</span></a>
                                             </li>
                                         </ul>
                                     </li>
                                     <li class="ut_fmenu_item">
-                                        <a href="#"><span class="ja">採用情報</span></a>
+                                        <a href="<?php echo home_url('/faq'); ?>"><span class="ja">よくある質問</span></a>
                                     </li>
                                     <li class="ut_fmenu_item">
-                                        <a href="#"><span class="ja">よくある質問</span></a>
-                                    </li>
-                                    <li class="ut_fmenu_item">
-                                        <a href="#"><span class="ja">お問い合わせ</span></a>
+                                        <a href="<?php echo home_url('/contact'); ?>"><span class="ja">お問い合わせ</span></a>
                                     </li>
                                 </ul>
                             </div>
@@ -66,7 +62,7 @@
                     </div>
                     <div class="col-12 col-md-auto">
                         <div class="footer_information">
-                            <a href="<?php home_url('/'); ?>" class="d-md-flex align-items-center">
+                            <a href="<?php echo home_url('/'); ?>" class="d-md-flex align-items-center">
                                 <p class="footer_information_company_logo"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="株式会社 U-TRADING" width="288" height="256"></p>
                                 <p class="footer_information_company_name">株式会社 U-TRADING</p>
                             </a>
@@ -98,6 +94,7 @@
                 <p class="copyright">&copy; 株式会社 U-TRADING <?php echo date('Y'); ?></p>
             </div>
         </footer>
+        <a href="#" class="pagetop">TOP</a>
 
     </div>
 
