@@ -110,6 +110,26 @@
     }
 }
 
+.ut_about{
+    picture{
+        @media screen and (min-width: 768px) {
+            position: relative;
+            height: calc(100vw / 3);
+        }
+    }
+
+    img{
+        @media screen and (min-width: 768px) {
+            width: auto;
+            height: 100%;
+            max-inline-size: none;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    }
+}
+
 .ut_service{
 
     &_list{
@@ -149,11 +169,19 @@
         }
 
         h3{
+            margin: 0;
             width: 100%;
             font-size: 18px;
             font-weight: 700;
             text-align: center;
         }
+    }
+}
+
+.ut_works{
+
+    &_slide{
+        overflow: auto;
     }
 }
 
@@ -165,14 +193,17 @@
         align-items: center;
         justify-content: center;
         margin: 10px 0;
+        padding: 20px;
         width: 100%;
+        color: var(--ut-green);
         text-align: center;
         border: 1px solid var(--ut-green);
+        border-radius: 6px;
+        transition: all 0.3s ease;
 
         .en{
             display: block;
             width: 100%;
-            color: var(--ut-green);
             font-size: 24px;
             font-weight: 700;
         }
@@ -180,8 +211,12 @@
         .ja{
             display: block;
             width: 100%;
-            color: var(--ut-green);
             font-size: 14px;
+        }
+
+        &:hover{
+            color: var(--ut-white);
+            background-color: var(--ut-green);
         }
     }
 }

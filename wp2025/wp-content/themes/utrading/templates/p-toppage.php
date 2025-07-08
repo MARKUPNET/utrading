@@ -74,7 +74,7 @@ get_header();
                     </div>
                 </section>
 
-                <section id="about" class="ut_block ut_block_about">
+                <section id="about" class="ut_block ut_block_about ut_about">
                     <h2 class="ut_block_title_h2 d-flex align-items-start flex-column"><span class="en">U-TRADING</span><span class="ja">U-TRADINGとは</span></h2>
                     <div class="ut_block_content">
                         <div class="row">
@@ -87,7 +87,7 @@ get_header();
                             <div class="col-12 col-md-6 mt-3 mt-md-0">
                                 <p class="lead_text">ここに文章を入力します。ここに文章を入力します。ここに文章を入力します。ここに文章を入力します。ここに文章を入力します。ここに文章を入力します。ここに文章を入力します。</p>
                                 <div class="d-flex justify-content-end">
-                                    <a href="#" class="btn btn-success">詳しく見る</a>
+                                    <a href="#" class="ut_button">詳しく見る</a>
                                 </div>
                             </div>
                         </div>
@@ -99,7 +99,7 @@ get_header();
                     <div class="ut_block_content">
                         <p class="lead_text">ここに文章を入力します。ここに文章を入力します。ここに文章を入力します。ここに文章を入力します。ここに文章を入力します。ここに文章を入力します。ここに文章を入力します。</p>
                         <div class="d-flex justify-content-end">
-                            <a href="#" class="btn btn-success">詳しく見る</a>
+                            <a href="#" class="ut_button">詳しく見る</a>
                         </div>
                         <div class="ut_service_list ut_scroll fade-in">
                             <div class="row justify-content-center">
@@ -138,83 +138,79 @@ get_header();
                     </div>
                 </section>
 
-                <section class="ut_block ut_block_works">
+                <section class="ut_block ut_block_works ut_works">
                     <h2 class="ut_block_title_h2 d-flex align-items-start flex-column"><span class="en">Works</span><span class="ja">施工実績</span></h2>
                     <div class="ut_block_content">
-                        <div class="row">
-                            <div class="col">
-                                <div id="carouselWorks" class="carousel slide" data-ride="carousel">
-                                    <div class="carousel-indicators">
-                                        <button type="button" data-bs-target="#carouselWorks" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                                        <button type="button" data-bs-target="#carouselWorks" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                        <button type="button" data-bs-target="#carouselWorks" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                                        <button type="button" data-bs-target="#carouselWorks" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                        <div class="ut_works_slide">
+                            <div class="d-flex gap-3">
+                                <div class="col-12 col-md-4 ut_works_slide_item">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <picture>
+                                                <source srcset="">
+                                                <img src="<?php echo get_template_directory_uri(); ?>/images/img_115628367.webp" alt="">
+                                            </picture>
+                                        </div>
+                                        <div class="card-body">
+                                            <h3>施工タイトル</h3>
+                                            <p>ここに文章を入れます。ここに文章を入れます。ここに文章を入れます。ここに文章を入れます。</p>
+                                        </div>
                                     </div>
-                                    <div class="carousel-inner">
-                                        <div class="carousel-item active">
-                                            <div class="card">
-                                                <div class="card-header">
-                                                    <picture>
-                                                        <source srcset="">
-                                                        <img src="<?php echo get_template_directory_uri(); ?>/images/img_111587379.webp" alt="">
-                                                    </picture>
-                                                </div>
-                                                <div class="card-body">
-                                                    <h3>施工タイトル</h3>
-                                                    <p>ここに文章を入れます。ここに文章を入れます。ここに文章を入れます。ここに文章を入れます。</p>
-                                                </div>
-                                            </div>
+                                </div>
+                                <div class="col-12 col-md-4 ut_works_slide_item">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <picture>
+                                                <source srcset="">
+                                                <img src="<?php echo get_template_directory_uri(); ?>/images/img_117184381.webp" alt="">
+                                            </picture>
                                         </div>
-                                        <div class="carousel-item">
-                                            <div class="card">
-                                                <div class="card-header">
-                                                    <picture>
-                                                        <source srcset="">
-                                                        <img src="<?php echo get_template_directory_uri(); ?>/images/img_115628367.webp" alt="">
-                                                    </picture>
-                                                </div>
-                                                <div class="card-body">
-                                                    <h3>施工タイトル</h3>
-                                                    <p>ここに文章を入れます。ここに文章を入れます。ここに文章を入れます。ここに文章を入れます。</p>
-                                                </div>
-                                            </div>
+                                        <div class="card-body">
+                                            <h3>施工タイトル</h3>
+                                            <p>ここに文章を入れます。ここに文章を入れます。ここに文章を入れます。ここに文章を入れます。</p>
                                         </div>
-                                        <div class="carousel-item">
-                                            <div class="card">
-                                                <div class="card-header">
-                                                    <picture>
-                                                        <source srcset="">
-                                                        <img src="<?php echo get_template_directory_uri(); ?>/images/img_117184381.webp" alt="">
-                                                    </picture>
-                                                </div>
-                                                <div class="card-body">
-                                                    <h3>施工タイトル</h3>
-                                                    <p>ここに文章を入れます。ここに文章を入れます。ここに文章を入れます。ここに文章を入れます。</p>
-                                                </div>
-                                            </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-4 ut_works_slide_item">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <picture>
+                                                <source srcset="">
+                                                <img src="<?php echo get_template_directory_uri(); ?>/images/img_111587379.webp" alt="">
+                                            </picture>
                                         </div>
-                                        <div class="carousel-item">
-                                            <div class="card">
-                                                <div class="card-header">
-                                                    <picture>
-                                                        <source srcset="">
-                                                        <img src="<?php echo get_template_directory_uri(); ?>/images/img_124798896.webp" alt="">
-                                                    </picture>
-                                                </div>
-                                                <div class="card-body">
-                                                    <h3>施工タイトル</h3>
-                                                    <p>ここに文章を入れます。ここに文章を入れます。ここに文章を入れます。ここに文章を入れます。</p>
-                                                </div>
-                                            </div>
+                                        <div class="card-body">
+                                            <h3>施工タイトル</h3>
+                                            <p>ここに文章を入れます。ここに文章を入れます。ここに文章を入れます。ここに文章を入れます。</p>
                                         </div>
-                                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                            <span class="sr-only">Previous</span>
-                                        </a>
-                                        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                            <span class="sr-only">Next</span>
-                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-4 ut_works_slide_item">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <picture>
+                                                <source srcset="">
+                                                <img src="<?php echo get_template_directory_uri(); ?>/images/img_124798896.webp" alt="">
+                                            </picture>
+                                        </div>
+                                        <div class="card-body">
+                                            <h3>施工タイトル</h3>
+                                            <p>ここに文章を入れます。ここに文章を入れます。ここに文章を入れます。ここに文章を入れます。</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-4 ut_works_slide_item">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <picture>
+                                                <source srcset="">
+                                                <img src="<?php echo get_template_directory_uri(); ?>/images/img_119819005.webp" alt="">
+                                            </picture>
+                                        </div>
+                                        <div class="card-body">
+                                            <h3>施工タイトル</h3>
+                                            <p>ここに文章を入れます。ここに文章を入れます。ここに文章を入れます。ここに文章を入れます。</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -246,7 +242,7 @@ get_header();
                     <div class="ut_block_content">
                         <p class="lead_text">ここに文章を入力します。ここに文章を入力します。ここに文章を入力します。ここに文章を入力します。ここに文章を入力します。ここに文章を入力します。ここに文章を入力します。</p>
                         <div class="d-flex justify-content-end">
-                            <a href="#" class="btn btn-success">詳しく見る</a>
+                            <a href="#" class="ut_button">詳しく見る</a>
                         </div>
                         <div class="ut_faq_list ut_scroll fade-in mt-5">
                             <dl class="ut_faq_item">
@@ -296,9 +292,14 @@ get_header();
             </div>
 
             <footer class="entry-footer">
-
-                <p>Instagramはこちら→</p>
-
+                <div class="row justify-content-center gap-3">
+                    <div class="col-12 col-md-5">
+                        <a href="#" target="_blank" class="ut_banner">カーセンサー</a>
+                    </div>
+                    <div class="col-12 col-md-5">
+                        <a href="#" target="_blank" class="ut_banner">グーネット</a>
+                    </div>
+                </div>
             </footer>
 
         </article>

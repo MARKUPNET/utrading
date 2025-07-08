@@ -3,30 +3,66 @@
         <footer class="site-footer">
             <div class="inner">
                 <div class="row justify-content-md-between flex-md-row-reverse">
-                    <div class="col-12 col-md-auto">
-                        <ul class="ut_fmenu_list">
-                            <li class="ut_fmenu_item">
-                                <a href="<?php home_url('/'); ?>"><span class="ja">ホーム</span><span class="en">Home</span></a>
-                            </li>
-                            <li class="ut_fmenu_item">
-                                <a href="#"><span class="ja">事業案内</span><span class="en">About us</span></a>
-                            </li>
-                            <li class="ut_fmenu_item">
-                                <a href="#"><span class="ja">施工実績</span><span class="en">Works</span></a>
-                            </li>
-                            <li class="ut_fmenu_item">
-                                <a href="#"><span class="ja">会社案内</span><span class="en">Company</span></a>
-                            </li>
-                            <li class="ut_fmenu_item">
-                                <a href="#"><span class="ja">採用情報</span><span class="en">Recrout</span></a>
-                            </li>
-                            <li class="ut_fmenu_item">
-                                <a href="#"><span class="ja">よくある質問</span><span class="en">Faq</span></a>
-                            </li>
-                            <li class="ut_fmenu_item">
-                                <a href="#"><span class="ja">お問い合わせ</span><span class="en">Contact</span></a>
-                            </li>
-                        </ul>
+                    <div class="col-12 col-md-6">
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+                                <ul class="ut_fmenu_list">
+                                    <li class="ut_fmenu_item">
+                                        <a href="<?php home_url('/'); ?>"><span class="ja">ホーム</span></a>
+                                    </li>
+                                    <li class="ut_fmenu_item">
+                                        <a href="#"><span class="ja">事業案内</span></a>
+                                        <ul class="ut_fmenu_list_sub">
+                                            <li class="ut_fmenu_item_sub">
+                                                <a href="#"><span class="ja">板金塗装</span></a>
+                                            </li>
+                                            <li class="ut_fmenu_item_sub">
+                                                <a href="#"><span class="ja">車検・点検</span></a>
+                                            </li>
+                                            <li class="ut_fmenu_item_sub">
+                                                <a href="#"><span class="ja">新車・中古車販売</span></a>
+                                            </li>
+                                            <li class="ut_fmenu_item_sub">
+                                                <a href="#"><span class="ja">ロードサービス</span></a>
+                                            </li>
+                                            <li class="ut_fmenu_item_sub">
+                                                <a href="#"><span class="ja">ガラスコーティング</span></a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="ut_fmenu_item">
+                                        <a href="#"><span class="ja">施工実績</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <ul class="ut_fmenu_list">
+                                    <li class="ut_fmenu_item">
+                                        <a href="#"><span class="ja">会社案内</span></a>
+                                        <ul class="ut_fmenu_list_sub">
+                                            <li class="ut_fmenu_item_sub">
+                                                <a href="#"><span class="ja">ご挨拶</span></a>
+                                            </li>
+                                            <li class="ut_fmenu_item_sub">
+                                                <a href="#"><span class="ja">会社概要</span></a>
+                                            </li>
+                                            <li class="ut_fmenu_item_sub">
+                                                <a href="#"><span class="ja">アクセス</span></a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="ut_fmenu_item">
+                                        <a href="#"><span class="ja">採用情報</span></a>
+                                    </li>
+                                    <li class="ut_fmenu_item">
+                                        <a href="#"><span class="ja">よくある質問</span></a>
+                                    </li>
+                                    <li class="ut_fmenu_item">
+                                        <a href="#"><span class="ja">お問い合わせ</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-12 col-md-auto">
                         <div class="footer_information">
@@ -37,6 +73,25 @@
                             <p class="footer_information_compamy_address">〒007-0890 北海道札幌市東区中沼町80-9</p>
                             <p cclass="footer_information_company_tel">TEL:011-788-9483</p>
                             <p cclass="footer_information_company_fax">FAX:011-788-9484</p>
+                            <p cclass="footer_information_company_pr"><a href="#" target="_blank" class="icon_blank">カーセンサー<i class="fas fa-external-link-alt"></i></a></p>
+                            <p cclass="footer_information_company_pr"><a href="#" target="_blank" class="icon_blank">グーネット<i class="fas fa-external-link-alt"></i></a></p>
+                            <ul class="ut_fsns_list">
+                                <li class="ut_fsns_item">
+                                    <a href="#">
+                                        <i class="fab fa-facebook"></i>
+                                    </a>
+                                </li>
+                                <li class="ut_fsns_item">
+                                    <a href="#">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                </li>
+                                <li class="ut_fsns_item">
+                                    <a href="#">
+                                        <i class="fab fa-tiktok"></i>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -46,10 +101,16 @@
 
     </div>
 
+    <!-- jQuery の読み込み -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
     <!-- Bootstrap の読み込み -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Slick Slider の読み込み -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
     <!-- U-TRADING JS の読み込み -->
     <script src="<?php echo get_template_directory_uri(); ?>/js/script.js"></script>
