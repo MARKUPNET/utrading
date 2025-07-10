@@ -1,8 +1,205 @@
-.toppage_title{
-    font-size: 28px;
 
+.ut_block{
+    padding: 20px 0;
+    position: relative;
     @media screen and (min-width: 768px) {
-        font-size: 48px;
+        padding: 40px 0;
+    }
+
+    &::after{
+        content: "";
+        display: block;
+        width: 100vw;
+        height: 1px;
+        border-top: 1px solid var(--ut-green);
+        position: absolute;
+        left: 50%;
+        top: 0;
+        opacity: 0;
+        transform: translateX(-100%);
+        transition: all 1s ease;
+    }
+
+    &_title_h2{
+        margin: 0 auto 20px;
+        max-width: 1140px;
+        @media screen and (min-width: 768px) {
+            margin: 0 auto 40px;
+            padding: 0 20px;
+        }
+
+        .en{
+            font-family: $font-serif-jp;
+            font-size: 24px;
+            position: relative;
+            overflow: hidden;
+            transform: translateX(50px);
+            opacity: 0;
+            transition: all 1s ease;
+            @media screen and (min-width: 768px) {
+                font-size: 58px;
+            }
+
+            &::before{
+                content: "";
+                width: 100%;
+                height: 3px;
+                background-color: var(--ut-lightgreen);
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                z-index: 1;
+                transform: translateX(-100%);
+                transition: all 1s ease;
+            }
+
+            &::after{
+                content: "";
+                width: 60px;
+                height: 3px;
+                background-color: var(--ut-yellow);
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                z-index: 2;
+                transform: translateX(-100%);
+                transition: all 3s ease;
+            }
+        }
+
+        .ja{
+            margin-top: 5px;
+            font-size: 10px;
+            transform: translateX(-50px);
+            opacity: 0;
+            transition: all 1s ease;
+            @media screen and (min-width: 768px) {
+                font-size: 18px;
+            }
+        }
+    }
+
+    &_content{
+
+        @media screen and (min-width: 768px) {
+            margin: 0 auto;
+            padding: 0 20px;
+            max-width: 1040px;
+        }
+    }
+
+    &.active{
+
+        &::after{
+            transform: translateX(-50%);
+            opacity: 1;
+        }
+
+        .ut_block_title_h2{
+            .en{
+                transform: translateX(0);
+                opacity: 1;
+
+                &::before{
+                    transform: translateX(0);
+                }
+
+                &::after{
+                    transform: translateX(0);
+                }
+            }
+
+            .ja{
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.ut_scroll{
+    display: block;
+    transition: all 1s ease;
+
+    &.fade-in{
+        opacity: 0;
+    }
+
+    &.fade-in-up{
+        transform: translateY(50%);
+        opacity: 0;
+    }
+
+    &.active{
+
+        &.fade-in{
+             opacity: 1;
+       }
+
+       &.fade-in-up{
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+    }
+}
+
+.ut_button{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 40px 10px 30px;
+    color: var(--ut-black);
+    line-height: 1;
+    border: 1px solid var(--ut-lightgreen);
+    border-radius: 3px;
+    position: relative;
+    transition: all 0.3s ease;
+
+    &::after{
+        content: ">";
+        display: block;
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translate(0, -50%);
+        transition: transform 0.3s ease;
+    }
+
+    &:hover{
+        color: var(--ut-white);
+        background-color: var(--ut-lightgreen);
+
+        &::after{
+            transform: translate(5px, -50%);
+        }
+    }
+}
+
+.ut_banner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 80px;
+    color: var(--ut-black);
+    background-color: var(--ut-lightgray);
+}
+
+.mainvisual_textwrapper{
+    padding: 10px;
+    text-shadow: 3px 3px 6px #FFF;
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    transform: translateY(-50%);
+
+    .toppage_title{
+        font-size: 28px;
+
+        @media screen and (min-width: 768px) {
+            font-size: 48px;
+        }
     }
 }
 
@@ -11,6 +208,7 @@
     &_list{
         margin: 0;
         padding: 0;
+        list-style: none;
         border-top: 1px solid var(--ut-green);
         border-bottom: 1px solid var(--ut-green);
     }

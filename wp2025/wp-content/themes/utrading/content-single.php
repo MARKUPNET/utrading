@@ -13,30 +13,39 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-    <div class="inside-article">
+    <header class="entry-header">
+        <p class="entry-title">ブログ</p>
+    </header>
 
-        <header class="page-header">
-            <h1 class="page_title"><?php the_title(); ?></h1>
-        </header>
+    <div class="entry-content">
 
-        <div class="page-content">
+        <ol class="ut_breadcrumb">
+            <li class="ut_breadcrumb-item"><a href="<?php echo home_url(); ?>">HOME</a></li>
+            <li class="ut_breadcrumb-item"><?php the_title(); ?></li>
+        </ol>
 
-            <ol class="ut_breadcrumb">
-                <li><a href="<?php echo home_url(); ?>">HOME</a></li>
-            </ol>
+        <h1 class="post-title"><?php the_title(); ?></h1>
 
-            <?php
-            the_content();
+        <?php
+        the_content('read more');
 
-            wp_link_pages(
-                array(
-                    'before' => '<div class="page-links">' . __( 'Pages:', 'utrading' ),
-                    'after'  => '</div>',
-                )
-            );
-            ?>
+        wp_link_pages();
 
-        </div>
+        if (comments_open() || get_comments_number()) :
+            comments_template();
+        endif;
+
+        the_post_navigation(array(
+            'next_text' => '<span class="meta-nav" aria-hidden="true">' . __('Next', 'utrading') . '</span> ' .
+                '<span class="screen-reader-text">' . __('Next post:', 'utrading') . '</span> ' .
+                '<span class="post-title">%title</span>',
+            'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __('Previous', 'utrading') . '</span> ' .
+                '<span class="screen-reader-text">' . __('Previous post:', 'utrading') . '</span> ' .
+                '<span class="post-title">%title</span>',
+        ));
+
+
+        ?>
 
     </div>
 

@@ -1,0 +1,111 @@
+@import 'variables';
+
+h1,h2,h3,h4,h5,h6{
+    color: var(--ut-black);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+a{
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+
+    &:hover{
+        opacity: 0.8;
+    }
+
+    &[target="_blank"]{
+        &:after{
+            content: "\f35d";
+            font-family: "Font Awesome 6 Free";
+            font-style: normal;
+            font-variant: normal;
+            line-height: 1;
+            text-rendering: auto;
+            font-weight: 900;
+            font-size: 0.8em;
+            margin-left: 2px;
+        }
+    }
+}
+
+table, th, td{
+    border: 1px solid var(--ut-black);
+}
+
+th, td{
+    padding: 0.5em;
+}
+
+ul{
+    padding: 0;
+    list-style: disc inside;
+}
+
+ol{
+    padding: 0;
+    list-style: decimal inside;
+}
+
+blockquote{
+    padding: 20px;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    position: relative;
+
+    &::before{
+        content: "❛";
+        font-size: 20px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        transform: translate(-50%, -50%);
+    }
+}
+
+code {
+    display: block;
+    font-size: .875em;
+    color: var(--bs-white);
+    word-wrap: break-word;
+    background-color: var(--bs-gray-dark);
+    padding: 10px;
+}
+
+.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.alignleft {
+    float: left;
+    margin: 0.5em 1em 0.5em 0;
+}
+
+.alignright {
+    float: right;
+    margin: 0.5em 0 0.5em 1em;
+}
+
+button{
+    background-color: var(--white);
+}
+
+.hidden{
+    display: none !important;
+}
+
+.isSP{
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+}
+
+.isPC{
+    display: none;
+    @media screen and (min-width: 768px) {
+        display: inherit;
+    }
+}
+

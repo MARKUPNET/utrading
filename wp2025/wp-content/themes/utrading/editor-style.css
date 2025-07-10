@@ -5,3 +5,18 @@
 h1{
     font-family: 'Noto Serif JP', 'Times New Roman', 'YuMincho', 'Hiragino Mincho ProN', 'Yu Mincho', 'MS PMincho', serif;
 }
+
+.mce-content-body code {
+    display: block;
+    font-size: .875em;
+    color: #ffffff;
+    word-wrap: break-word;
+    background-color: #343a40;
+    padding: 10px;
+}
+
+.mce-content-body code[data-mce-selected]{
+    display: block;
+    color: #ffffff;
+    background-color: #343a40;
+}

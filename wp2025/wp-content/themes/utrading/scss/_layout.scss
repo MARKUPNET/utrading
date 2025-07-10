@@ -1,0 +1,87 @@
+@import 'variables';
+
+html{
+    scroll-behavior: smooth;
+}
+
+.wrapper{
+    padding-top: 50px;
+    overflow: hidden;
+    position: relative;
+}
+
+.entry-header{
+    width: 100%;
+    height: 200px;
+    background-color: #ccc;
+    position: relative;
+}
+
+.entry-title{
+    font-size: 32px;
+    font-weight: 700;
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    transform: translateY(-50%);
+}
+
+.entry-content{
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 1040px;
+}
+
+.entry-footer{
+    margin: 20px 0;
+    padding: 0 20px;
+}
+
+.page-header{
+    position: relative;
+}
+
+.page-title{
+    font-size: 32px;
+    font-weight: 700;
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    transform: translateY(-50%);
+}
+
+.page-content{
+    padding: 0 20px;
+}
+
+.page-footer{
+    margin: 20px 0;
+    padding: 0 20px;
+}
+
+.post-title{
+    margin: 20px 0 40px;
+}
+
+.pagetop{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    color: var(--ut-white);
+    font-size: 18px;
+    font-weight: 700;
+    background-color: var(--ut-green);
+    border: 1px solid var(--ut-white);
+    border-radius: 50%;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+
+    &.visible{
+        opacity: 1;
+    }
+}

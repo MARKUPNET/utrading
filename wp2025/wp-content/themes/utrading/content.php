@@ -12,32 +12,24 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-    <div class="inside-article">
+    <header class="entry-header">
 
-        <header class="entry-header">
+        <h1 class="entry-title"><?php the_title(); ?></h1>
 
-            <h1><?php the_title(); ?></h1>
+    </header>
 
-        </header>
+    <div class="entry-content">
 
-        <div class="entry-summary">
-            <?php the_excerpt(); ?>
-        </div>
+        <ol class="ut_breadcrumb">
+            <li class="ut_breadcrumb-item"><a href="<?php echo home_url(); ?>">HOME</a></li>
+            <li class="ut_breadcrumb-item"><?php the_title(); ?></li>
+        </ol>
 
-        <div class="entry-content">
+        <?php
+        the_content();
 
-            <?php
-            the_content();
-
-            wp_link_pages(
-                array(
-                    'before' => '<div class="page-links">' . __( 'Pages:', 'utrading' ),
-                    'after'  => '</div>',
-                )
-            );
-            ?>
-
-        </div>
+        wp_link_pages();
+        ?>
 
     </div>
 
