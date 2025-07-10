@@ -1,4 +1,15 @@
+<?php
+/**
+ * The template for displaying the footer.
+ *
+ * @package u-trading
+ * @since u-trading 1.0
+ */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly.
+}
+?>
         <footer class="site-footer">
             <div class="inner">
                 <div class="row justify-content-md-between flex-md-row-reverse">
@@ -112,5 +123,8 @@
     <!-- U-TRADING JS の読み込み -->
     <script src="<?php echo get_template_directory_uri(); ?>/js/script.js"></script>
 
+<?php
+wp_footer();
+?>
 </body>
 </html>

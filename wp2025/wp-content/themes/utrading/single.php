@@ -1,35 +1,50 @@
 <?php
 /**
- * The template for displaying all single posts and attachments
+ * The Template for displaying all single posts.
  *
+ * @package u-trading
+ * @since u-trading 1.0
  */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly.
+}
+
 get_header(); ?>
 
-        <div id="content" class="site-content">
-            <main id="main" class="site-main" role="main">
+<div id="content" class="site-content">
+    <main id="main" class="site-main" role="main">
 
-                <?php
-                while (have_posts()) : the_post();
+    <?php
+    if (have_posts()) :
 
-                    get_template_part('content', get_post_format());
+        while (have_posts()) : the_post();
 
-                    if (comments_open() || get_comments_number()) :
-                        comments_template();
-                    endif;
+            get_template_part('content', 'single');
 
-                    the_post_navigation(array(
-                        'next_text' => '<span class="meta-nav" aria-hidden="true">' . __('Next', 'twentyfifteen') . '</span> ' .
-                            '<span class="screen-reader-text">' . __('Next post:', 'twentyfifteen') . '</span> ' .
-                            '<span class="post-title">%title</span>',
-                        'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __('Previous', 'twentyfifteen') . '</span> ' .
-                            '<span class="screen-reader-text">' . __('Previous post:', 'twentyfifteen') . '</span> ' .
-                            '<span class="post-title">%title</span>',
-                    ));
+            if (comments_open() || get_comments_number()) :
+                comments_template();
+            endif;
 
-                endwhile;
-                ?>
+            the_post_navigation(array(
+                'next_text' => '<span class="meta-nav" aria-hidden="true">' . __('Next', 'utrading') . '</span> ' .
+                    '<span class="screen-reader-text">' . __('Next post:', 'utrading') . '</span> ' .
+                    '<span class="post-title">%title</span>',
+                'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __('Previous', 'utrading') . '</span> ' .
+                    '<span class="screen-reader-text">' . __('Previous post:', 'utrading') . '</span> ' .
+                    '<span class="post-title">%title</span>',
+            ));
 
-            </main>
-        </div>
+        endwhile;
+
+    else :
+
+        get_template_part('content', 'none');
+
+    endif;
+    ?>
+
+    </main>
+</div>
 
 <?php get_footer(); ?>

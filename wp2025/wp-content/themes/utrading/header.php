@@ -1,5 +1,17 @@
-<!DOCTYPE html>
-<html <?php language_attributes(); ?> class="no-js">
+<?php
+/**
+ * The template for displaying the header.
+ *
+ * @package u-trading
+ * @since u-trading 1.0
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly.
+}
+
+?><!DOCTYPE html>
+<html <?php language_attributes(); ?>>
 <head>
 <meta charset="<?php bloginfo('charset'); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,21 +40,20 @@
 <!-- Stylesheet の読み込み -->
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/utrading-style.css">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php the_title(); ?> | 株式会社 U-TRADING</title>
+<?php wp_head(); ?>
 </head>
-<body>
+
+<body <?php body_class(); ?>>
 
     <div class="wrapper">
 
-        <button id="js-hamburger" class="ut_hamburger">
-            <span class="ut_hamburger_bar"></span>
-            <span class="ut_hamburger_text">menu</span>
-        </button>
-
         <header class="site-header">
+
+            <button id="js-hamburger" class="ut_hamburger">
+                <span class="ut_hamburger_bar"></span>
+                <span class="ut_hamburger_text">menu</span>
+            </button>
+
             <div class="ut_logo">
                 <a href="<?php echo home_url('/'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="株式会社 U-TRADING" width="288" height="256"></a>
             </div>

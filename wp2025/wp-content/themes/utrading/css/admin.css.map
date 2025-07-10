@@ -1,9 +1,0 @@
-{
-	"version": 3,
-	"file": "admin.css",
-	"sources": [
-		"../scss/admin.scss"
-	],
-	"names": [],
-	"mappings": "AAAA,AAAA,iBAAiB,CAAC,GAAG,AAAA,CACnB,KAAK,CAAE,eAAe,CACvB,AACD,AAAA,UAAU,AAAC,CACP,QAAQ,CAAE,mBAAmB,CAC7B,GAAG,CAAE,eAAe,CACpB,SAAS,CAAE,gBAAgB,CAAE,UAAU,CACvC,KAAK,CAAE,iBAAiB,CAC3B,AACD,AAAA,WAAW,AAAA,CACT,QAAQ,CAAE,mBAAmB,CAC9B"
-}

@@ -1,47 +1,44 @@
 <?php
 /**
- * コンテンツ
+ * The template for displaying posts within the loop.
+ *
+ * @package u-trading
+ * @since u-trading 1.0
  */
 
-get_header();
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly.
+}
 ?>
-<div id="content" class="site-content">
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-    <div class="breadcrumbs">
-        <ol itemscope="" itemtype="http://schema.org/BreadcrumbList" class="container">
-            <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
-                <a itemprop="item" href="<?php home_url(); ?>">U-TRADING</a>
-            </li>
-        </ol>
+    <div class="inside-article">
+
+        <header class="entry-header">
+
+            <h1><?php the_title(); ?></h1>
+
+        </header>
+
+        <div class="entry-summary">
+            <?php the_excerpt(); ?>
+        </div>
+
+        <div class="entry-content">
+
+            <?php
+            the_content();
+
+            wp_link_pages(
+                array(
+                    'before' => '<div class="page-links">' . __( 'Pages:', 'utrading' ),
+                    'after'  => '</div>',
+                )
+            );
+            ?>
+
+        </div>
+
     </div>
 
-    <main id="main" class="site-main" role="main">
-
-        <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
-            <header class="entry-header">
-
-                <h1><?php the_title(); ?></h1>
-
-            </header>
-
-            <div class="entry-content">
-
-                <?php the_content(); ?>
-
-            </div>
-
-            <footer class="entry-footer">
-
-                <p>ページャー</p>
-
-            </footer>
-
-        </article>
-
-    </main>
-
-</div>
-<?php
-get_footer();
-?>
+</article>
