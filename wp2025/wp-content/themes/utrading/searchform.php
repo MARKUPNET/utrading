@@ -2,7 +2,9 @@
 /**
  * The template for displaying search forms in Generate
  *
- * @package GeneratePress
+ * @package Wordpress
+ * @subpackage u-trading
+ * @since 1.0
  */
 
 if (! defined('ABSPATH')) {

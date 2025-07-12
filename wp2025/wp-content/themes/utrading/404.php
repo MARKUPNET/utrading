@@ -2,8 +2,9 @@
 /**
  * The template for displaying 404 pages (Not Found).
  *
- * @package u-trading
- * @since u-trading 1.0
+ * @package Wordpress
+ * @subpackage u-trading
+ * @since 1.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

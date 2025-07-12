@@ -8,8 +8,9 @@
  * E.g., it puts together the home page when no home.php file exists.
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package u-trading
- * @since u-trading 1.0
+ * @package Wordpress
+ * @subpackage u-trading
+ * @since 1.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

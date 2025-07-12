@@ -7,8 +7,9 @@
  * and that other 'pages' on your WordPress site will use a
  * different template.
  *
- * @package u-trading
- * @since u-trading 1.0
+ * @package Wordpress
+ * @subpackage u-trading
+ * @since 1.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

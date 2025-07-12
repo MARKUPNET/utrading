@@ -18,12 +18,7 @@ get_header(); ?>
 
         <?php if (have_posts()) : ?>
 
-        <header class="page-header <?php
-            $queried_object = get_queried_object();
-            if ( isset( $queried_object->slug ) ) {
-                echo esc_attr( $queried_object->slug );
-            }
-            ?>">
+        <header class="page-header <?php echo esc_attr( get_query_var('post_type') ); ?>">
             <div class="header-content">
                 <?php
                 the_archive_title('<h1 class="page-title">', '</h1>');
@@ -34,7 +29,7 @@ get_header(); ?>
 
         <div class="page-content">
 
-            <?php ut_custom_breadcrumb(); ?>
+            <?php ut_custom_breadcrumb(array('taxonomies_to_display' => array('category', 'news_cat', 'works_cat'))); ?>
 
             <?php while (have_posts()) : the_post(); ?>
 

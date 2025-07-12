@@ -2,8 +2,9 @@
 /**
  * The template for displaying single posts.
  *
- * @package u-trading
- * @since u-trading 1.0
+ * @package Wordpress
+ * @subpackage u-trading
+ * @since 1.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -13,16 +14,22 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-    <header class="entry-header">
-        <p class="entry-title">ブログ</p>
+    <header class="entry-header <?php echo esc_attr( get_post_type() ); ?>">
+        <div class="header-content">
+            <p class="entry-title">
+                <?php
+                $post_type_obj = get_post_type_object( get_post_type() );
+                if ( $post_type_obj ) {
+                    echo esc_html( $post_type_obj->labels->name );
+                }
+                ?>
+            </p>
+        </div>
     </header>
 
     <div class="entry-content">
 
-        <ol class="ut_breadcrumb">
-            <li class="ut_breadcrumb-item"><a href="<?php echo home_url(); ?>">HOME</a></li>
-            <li class="ut_breadcrumb-item"><?php the_title(); ?></li>
-        </ol>
+        <?php ut_custom_breadcrumb(array('taxonomies_to_display' => array('category', 'news_cat', 'works_cat'))); ?>
 
         <h1 class="post-title"><?php the_title(); ?></h1>
 

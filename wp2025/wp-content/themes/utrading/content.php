@@ -2,8 +2,9 @@
 /**
  * The template for displaying posts within the loop.
  *
- * @package u-trading
- * @since u-trading 1.0
+ * @package Wordpress
+ * @subpackage u-trading
+ * @since 1.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -20,10 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
     <div class="entry-content">
 
-        <ol class="ut_breadcrumb">
-            <li class="ut_breadcrumb-item"><a href="<?php echo home_url(); ?>">HOME</a></li>
-            <li class="ut_breadcrumb-item"><?php the_title(); ?></li>
-        </ol>
+        <?php get_template_part('components/breadclumb'); ?>
 
         <?php
         the_content();

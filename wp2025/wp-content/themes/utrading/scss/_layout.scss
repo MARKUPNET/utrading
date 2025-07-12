@@ -10,50 +10,110 @@ html{
     position: relative;
 }
 
-.entry-header{
+.entry-header,
+.page-header{
     width: 100%;
-    height: 200px;
-    background-color: #ccc;
+    height: 100px;
+    background-image: url(../images/img_119867410.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     position: relative;
+    @media screen and (min-width: 768px) {
+        height: 200px;
+    }
+
 }
 
-.entry-title{
-    font-size: 32px;
-    font-weight: 700;
+.entry-header{
+
+    &.post{
+        background-image: url(../images/img_119867410.webp);
+    }
+
+    &.news{
+        background-image: url(../images/img_119867410.webp);
+    }
+
+    &.works{
+        background-image: url(../images/img_119867410.webp);
+    }
+}
+
+.page-header{
+
+    &.error404{
+        background-image: url(../images/img_119867410.webp);
+    }
+
+    &.service{
+        background-image: url(../images/img_119867410.webp);
+    }
+
+    &.company{
+        background-image: url(../images/img_119867410.webp);
+    }
+
+    &.faq{
+        background-image: url(../images/img_119867410.webp);
+    }
+
+    &.contact{
+        background-image: url(../images/img_119867410.webp);
+    }
+
+    &.post{
+        background-image: url(../images/img_119867410.webp);
+    }
+
+    &.news{
+        background-image: url(../images/img_119867410.webp);
+    }
+
+    &.works{
+        background-image: url(../images/img_119867410.webp);
+    }
+}
+
+.header-content{
+    margin: 0;
+    padding: 0 40px;
+    color: var(--ut-white);
     position: absolute;
     top: 50%;
-    left: 50px;
+    left: 10px;
     transform: translateY(-50%);
+    @media screen and (min-width: 768px) {
+        left: 50px;
+    }
 }
 
-.entry-content{
+.entry-title,
+.page-title{
+    margin: 0;
+    padding: 0;
+    color: var(--ut-white);
+    font-family: $font-serif-jp;
+    font-size: 26px;
+    font-weight: 700;
+    @media screen and (min-width: 768px) {
+        font-size: 32px;
+    }
+}
+
+.entry-meta{
+    margin: 20px 0;
+    padding: 0 20px;
+}
+
+.entry-content,
+.page-content{
     margin: 0 auto;
     padding: 20px;
     max-width: 1040px;
 }
 
-.entry-footer{
-    margin: 20px 0;
-    padding: 0 20px;
-}
-
-.page-header{
-    position: relative;
-}
-
-.page-title{
-    font-size: 32px;
-    font-weight: 700;
-    position: absolute;
-    top: 50%;
-    left: 50px;
-    transform: translateY(-50%);
-}
-
-.page-content{
-    padding: 0 20px;
-}
-
+.entry-footer,
 .page-footer{
     margin: 20px 0;
     padding: 0 20px;
@@ -83,5 +143,36 @@ html{
 
     &.visible{
         opacity: 1;
+    }
+}
+
+.post-navigation{
+    margin: 20px 0;
+}
+
+.nav-links{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    a{
+        color: var(--ut-black);
+        font-size: 16px;
+        font-weight: 700;
+
+        .meta-nav{
+            display: none;
+        }
+    }
+
+    .nav-previous a::before{
+        content: "<";
+        margin-right: 10px;
+    }
+
+    .nav-next a::after{
+        content: ">";
+        margin-left: 10px;
     }
 }

@@ -24,51 +24,29 @@ get_header();
                     <h2 class="ut_block_title_h2 d-flex align-items-start flex-column"><span class="en">News</span><span class="ja">新着情報</span></h2>
                     <div class="ut_block_content">
                         <ul class="news_list">
+                            <?php
+                            $args = [
+                                'post_type' => 'news',
+                                'post_status' => 'publish',
+                                'posts_per_page' => 5
+                            ];
+                            $loop = new WP_Query($args);
+                            while($loop->have_posts()): $loop->the_post();
+                            ?>
                             <li class="news_item">
-                                <a href="#">
+                                <a href="<?php the_permalink(); ?>">
                                     <div class="news_meta">
-                                        <span class="news_date">2025-07-01</span>
-                                        <span class="news_category news">お知らせ</span>
+                                        <span class="news_date"><?php echo get_the_date(); ?></span>
+                                        <?php
+                                        $terms = get_the_terms( get_the_ID(), 'news_cat' );
+                                        if ( $terms && ! is_wp_error( $terms ) ) : $term = array_shift( $terms ); // 最初のカテゴリーを取得 ?>
+                                        <span class="news_category <?php echo esc_attr( $term->slug ); ?>"><?php echo esc_html( $term->name ); ?></span>
+                                        <?php endif; ?>
                                     </div>
-                                    <span class="news_text">ホームページを開設しました</span>
+                                    <span class="news_text"><?php the_title(); ?></span>
                                 </a>
                             </li>
-                            <li class="news_item">
-                                <a href="#">
-                                    <div class="news_meta">
-                                        <span class="news_date">2025-06-10</span>
-                                        <span class="news_category usedcar">入荷情報</span>
-                                    </div>
-                                    <span class="news_text">アルファード入荷しました。</span>
-                                </a>
-                            </li>
-                            <li class="news_item">
-                                <a href="#">
-                                    <div class="news_meta">
-                                        <span class="news_date">2025-05-10</span>
-                                        <span class="news_category usedcar">入荷情報</span>
-                                    </div>
-                                    <span class="news_text">ベルファイア入荷しました</span>
-                                </a>
-                            </li>
-                            <li class="news_item">
-                                <a href="#">
-                                    <div class="news_meta">
-                                        <span class="news_date">2025-04-10</span>
-                                        <span class="news_category usedcar">入荷情報</span>
-                                    </div>
-                                    <span class="news_text">トライトン入荷しました</span>
-                                </a>
-                            </li>
-                            <li class="news_item">
-                                <a href="#">
-                                    <div class="news_meta">
-                                        <span class="news_date">2024-12-01</span>
-                                        <span class="news_category news">お知らせ</span>
-                                    </div>
-                                    <span class="news_text">年末年始（12/28-1/6）はお休みします</span>
-                                </a>
-                            </li>
+                            <?php endwhile;?>
                         </ul>
                     </div>
                 </section>
@@ -95,7 +73,7 @@ get_header();
                     <div class="ut_block_content">
                         <p class="lead_text">ここに文章を入力します。ここに文章を入力します。ここに文章を入力します。ここに文章を入力します。ここに文章を入力します。ここに文章を入力します。ここに文章を入力します。</p>
                         <div class="d-flex justify-content-end">
-                            <a href="<?php echo home_url('/service'); ?>" class="ut_button">詳しく見る</a>
+                            <a href="<?php echo home_url('/service'); ?>" class="ut_button">more</a>
                         </div>
                         <div class="ut_service_list ut_scroll fade-in">
                             <div class="row justify-content-center">
@@ -137,6 +115,9 @@ get_header();
                 <section class="ut_block ut_block_works ut_works">
                     <h2 class="ut_block_title_h2 d-flex align-items-start flex-column"><span class="en">Works</span><span class="ja">施工実績</span></h2>
                     <div class="ut_block_content">
+                        <div class="d-flex justify-content-end">
+                            <a href="<?php echo home_url('/works'); ?>" class="ut_button">more</a>
+                        </div>
                         <div class="ut_works_slide">
                             <div class="d-flex gap-3">
                                 <div class="col-12 col-md-4 ut_works_slide_item">
@@ -248,7 +229,7 @@ get_header();
                     <div class="ut_block_content">
                         <p class="lead_text">ここに文章を入力します。ここに文章を入力します。ここに文章を入力します。ここに文章を入力します。ここに文章を入力します。ここに文章を入力します。ここに文章を入力します。</p>
                         <div class="d-flex justify-content-end">
-                            <a href="<?php echo home_url('/faq'); ?>" class="ut_button">詳しく見る</a>
+                            <a href="<?php echo home_url('/faq'); ?>" class="ut_button">more</a>
                         </div>
                         <div class="ut_faq_list ut_scroll fade-in mt-5">
                             <dl class="ut_faq_item">

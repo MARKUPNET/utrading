@@ -2,8 +2,9 @@
 /**
  * The template used for displaying page content in page.php
  *
- * @package u-trading
- * @since u-trading 1.0
+ * @package Wordpress
+ * @subpackage u-trading
+ * @since 1.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -13,16 +14,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-    <header class="page-header">
-        <h1 class="page_title"><?php the_title(); ?></h1>
+    <header class="page-header <?php echo esc_attr( $post->post_name ); ?>">
+        <div class="header-content">
+            <h1 class="page-title"><?php the_title(); ?></h1>
+        </div>
     </header>
 
     <div class="page-content">
 
-        <ol class="ut_breadcrumb">
-            <li class="ut_breadcrumb-item"><a href="<?php echo home_url(); ?>">HOME</a></li>
-            <li class="ut_breadcrumb-item"><?php the_title(); ?></li>
-        </ol>
+        <?php ut_custom_breadcrumb(array('taxonomies_to_display' => array('category', 'news_cat', 'works_cat'))); ?>
 
         <?php
         the_content();
