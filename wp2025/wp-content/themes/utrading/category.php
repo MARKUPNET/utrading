@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying Archive pages.
+ * The template for displaying Category Archive pages.
  *
  * @package Wordpress
  * @subpackage u-trading
@@ -58,3 +58,4 @@ get_header(); ?>
 </div>
 
 <?php get_footer(); ?>
+
