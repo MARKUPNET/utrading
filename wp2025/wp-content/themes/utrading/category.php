@@ -36,6 +36,8 @@ get_header(); ?>
 
             <?php ut_custom_breadcrumb(array('taxonomies_to_display' => array('category', 'news_cat', 'works_cat'))); ?>
 
+            <p>TEST</p>
+
             <?php while (have_posts()) : the_post(); ?>
 
             <article>

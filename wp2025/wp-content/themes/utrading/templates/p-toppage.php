@@ -115,13 +115,19 @@ get_header();
                 <section class="ut_block ut_block_works ut_works">
                     <h2 class="ut_block_title_h2 d-flex align-items-start flex-column"><span class="en">Works</span><span class="ja">施工実績</span></h2>
                     <div class="ut_block_content">
-                        <div class="d-flex justify-content-end">
-                            <a href="<?php echo home_url('/works'); ?>" class="ut_button">more</a>
-                        </div>
-                        <div class="ut_works_slide">
+                        <div class="ut_works_slider">
                             <div class="d-flex gap-3">
+                                <?php
+                                $args = [
+                                    'post_type' => 'works',
+                                    'post_status' => 'publish',
+                                    'posts_per_page' => 5
+                                ];
+                                $loop = new WP_Query($args);
+                                while($loop->have_posts()): $loop->the_post();
+                                ?>
                                 <div class="col-12 col-md-4 ut_works_slide_item">
-                                    <a href="<?php echo home_url('/works'); ?>">
+                                    <a href="<?php the_permalink(); ?>">
                                         <div class="card">
                                             <div class="card-header">
                                                 <picture>
@@ -130,76 +136,13 @@ get_header();
                                                 </picture>
                                             </div>
                                             <div class="card-body">
-                                                <h3>施工タイトル</h3>
-                                                <p>ここに文章を入れます。ここに文章を入れます。ここに文章を入れます。ここに文章を入れます。</p>
+                                                <h3><?php the_title(); ?></h3>
+                                                <p><?php the_excerpt(); ?></p>
                                             </div>
                                         </div>
                                     </a>
                                 </div>
-                                <div class="col-12 col-md-4 ut_works_slide_item">
-                                    <a href="<?php echo home_url('/works'); ?>">
-                                        <div class="card">
-                                            <div class="card-header">
-                                                <picture>
-                                                    <source srcset="">
-                                                    <img src="<?php echo get_template_directory_uri(); ?>/images/img_117184381.webp" alt="">
-                                                </picture>
-                                            </div>
-                                            <div class="card-body">
-                                                <h3>施工タイトル</h3>
-                                                <p>ここに文章を入れます。ここに文章を入れます。ここに文章を入れます。ここに文章を入れます。</p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-12 col-md-4 ut_works_slide_item">
-                                    <a href="<?php echo home_url('/works'); ?>">
-                                        <div class="card">
-                                            <div class="card-header">
-                                                <picture>
-                                                    <source srcset="">
-                                                    <img src="<?php echo get_template_directory_uri(); ?>/images/img_111587379.webp" alt="">
-                                                </picture>
-                                            </div>
-                                            <div class="card-body">
-                                                <h3>施工タイトル</h3>
-                                                <p>ここに文章を入れます。ここに文章を入れます。ここに文章を入れます。ここに文章を入れます。</p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-12 col-md-4 ut_works_slide_item">
-                                    <a href="<?php echo home_url('/works'); ?>">
-                                        <div class="card">
-                                            <div class="card-header">
-                                                <picture>
-                                                    <source srcset="">
-                                                    <img src="<?php echo get_template_directory_uri(); ?>/images/img_124798896.webp" alt="">
-                                                </picture>
-                                            </div>
-                                            <div class="card-body">
-                                                <h3>施工タイトル</h3>
-                                                <p>ここに文章を入れます。ここに文章を入れます。ここに文章を入れます。ここに文章を入れます。</p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-12 col-md-4 ut_works_slide_item">
-                                    <a href="<?php echo home_url('/works'); ?>">
-                                        <div class="card">
-                                            <div class="card-header">
-                                                <picture>
-                                                    <source srcset="">
-                                                    <img src="<?php echo get_template_directory_uri(); ?>/images/img_119819005.webp" alt="">
-                                                </picture>
-                                            </div>
-                                            <div class="card-body">
-                                                <h3>施工タイトル</h3>
-                                                <p>ここに文章を入れます。ここに文章を入れます。ここに文章を入れます。ここに文章を入れます。</p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
+                                <?php endwhile; ?>
                             </div>
                         </div>
                     </div>

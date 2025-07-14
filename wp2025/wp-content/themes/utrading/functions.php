@@ -41,16 +41,13 @@ add_action( 'after_setup_theme', 'utrading_setup' );
 
 // カスタム投稿タイプ・タクソノミー登録
 function ut_cpts_news() {
-
     /**
      * Post Type: 新着情報.
      */
-
     $labels = [
         "name" => "新着情報",
         "singular_name" => "新着情報",
     ];
-
     $args = [
         "label" => "新着情報",
         "labels" => $labels,
@@ -77,23 +74,19 @@ function ut_cpts_news() {
         "supports" => [ "title", "editor", "thumbnail" ],
         "show_in_graphql" => false,
     ];
-
     register_post_type( "news", $args );
 }
 
 add_action( 'init', 'ut_cpts_news' );
 
 function ut_taxes_news_cat() {
-
     /**
      * Taxonomy: カテゴリ.
      */
-
     $labels = [
         "name" => "カテゴリ",
         "singular_name" => "カテゴリ",
     ];
-
     $args = [
         "label" => "カテゴリ",
         "labels" => $labels,
@@ -120,16 +113,13 @@ function ut_taxes_news_cat() {
 add_action( 'init', 'ut_taxes_news_cat' );
 
 function ut_cpts_works() {
-
     /**
      * Post Type: 施工実績.
      */
-
     $labels = [
         "name" => "施工実績",
         "singular_name" => "施工実績",
     ];
-
     $args = [
         "label" => "施工実績",
         "labels" => $labels,
@@ -156,14 +146,12 @@ function ut_cpts_works() {
         "supports" => [ "title", "editor", "thumbnail" ],
         "show_in_graphql" => false,
     ];
-
     register_post_type( "works", $args );
-    }
+}
 
 add_action( 'init', 'ut_cpts_works' );
 
 function ut_taxes_works_cat() {
-
     /**
      * Taxonomy: カテゴリ.
      */
@@ -172,8 +160,6 @@ function ut_taxes_works_cat() {
         "name" => "カテゴリ",
         "singular_name" => "カテゴリ",
     ];
-
-
     $args = [
         "label" => "カテゴリ",
         "labels" => $labels,
