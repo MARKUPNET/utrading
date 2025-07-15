@@ -15,7 +15,7 @@ function utrading_setup() {
 
     // オリジナル画像サイズを追加
     add_action('after_setup_theme', function() {
-        add_image_size('custom-thumb', 600, 400, true); // 幅600px, 高さ400px, トリミングあり
+        add_image_size('custom-thumb', 640, 360, true); // 幅640px, 高さ360px, トリミングあり
     });
 
 

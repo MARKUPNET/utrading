@@ -34,8 +34,13 @@ get_header(); ?>
 
         <div class="page-content">
 
-            <?php ut_custom_breadcrumb(array('taxonomies_to_display' => array('category', 'news_cat', 'works_cat'))); ?>
-            <p>TEST</p>
+            <?php ut_custom_breadcrumb(array('taxonomies_to_display' => array('category'))); ?>
+
+            <ul class="ut_terms_list">
+                <li class="ut_terms_item">
+                    <a href="">term</a>
+                </li>
+            </ul>
 
             <?php while (have_posts()) : the_post(); ?>
 

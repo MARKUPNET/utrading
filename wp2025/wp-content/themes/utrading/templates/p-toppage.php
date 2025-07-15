@@ -78,31 +78,31 @@ get_header();
                         <div class="ut_service_list ut_scroll fade-in">
                             <div class="row justify-content-center">
                                 <div class="col-12 col-md-4">
-                                    <a href="<?php echo home_url('/service/#ach1'); ?>" class="ut_service_item">
+                                    <a href="<?php echo home_url('/service/#a1'); ?>" class="ut_service_item">
                                         <i class="fa-solid fa-spray-can-sparkles"></i>
                                         <h3>板金塗装</h3>
                                     </a>
                                 </div>
                                 <div class="col-12 col-md-4">
-                                    <a href="<?php echo home_url('/service/#ach1'); ?>" class="ut_service_item">
+                                    <a href="<?php echo home_url('/service/#a2'); ?>" class="ut_service_item">
                                         <i class="fa-solid fa-gauge-high"></i>
                                         <h3>車検・点検</h3>
                                     </a>
                                 </div>
                                 <div class="col-12 col-md-4">
-                                    <a href="<?php echo home_url('/service/#ach1'); ?>" class="ut_service_item">
+                                    <a href="<?php echo home_url('/service/#a3'); ?>" class="ut_service_item">
                                         <i class="fa-solid fa-car-side"></i>
                                         <h3>新車・中古車販売</h3>
                                     </a>
                                 </div>
                                 <div class="col-12 col-md-4">
-                                    <a href="<?php echo home_url('/service/#ach1'); ?>" class="ut_service_item">
+                                    <a href="<?php echo home_url('/service/#a4'); ?>" class="ut_service_item">
                                         <i class="fa-solid fa-spray-can-sparkles"></i>
                                         <h3>ロードサービス</h3>
                                     </a>
                                 </div>
                                 <div class="col-12 col-md-4">
-                                    <a href="<?php echo home_url('/service/#ach1'); ?>" class="ut_service_item">
+                                    <a href="<?php echo home_url('/service/#a5'); ?>" class="ut_service_item">
                                         <i class="fa-solid fa-spray-can-sparkles"></i>
                                         <h3>ガラスコーティング</h3>
                                     </a>

@@ -1,0 +1,18 @@
+.company{
+
+    &_block{
+        margin: 20px 0;
+        padding: 20px 0;
+    }
+
+    &_block_title{
+
+        .en{
+            font-size: 38px;
+        }
+
+        .ja{
+            font-size: 14px;
+        }
+    }
+}
