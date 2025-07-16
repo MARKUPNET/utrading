@@ -10,6 +10,9 @@
 if ( ! function_exists( 'utrading_setup' ) ) :
 function utrading_setup() {
 
+    // アイキャッチ画像
+    add_theme_support( 'post-thumbnails' );
+
     // テーマの翻訳
     load_theme_textdomain( 'utrading' );
 
@@ -47,6 +50,29 @@ function ut_cpts_news() {
     $labels = [
         "name" => "新着情報",
         "singular_name" => "新着情報",
+        "add_new" => "新着情報を追加", // 「+ 新規追加」ボタンのテキスト
+        "add_new_item" => "新着情報を追加", // 新規投稿ページのタイトル
+        "edit_item" => "新着情報を編集", // 編集ページのタイトル
+        "new_item" => "新しい新着情報", // 新規追加後のメッセージ
+        "view_item" => "新着情報を表示", // 投稿表示リンク
+        "view_items" => "新着情報を表示", // 複数表示時のリンク
+        "search_items" => "新着情報を検索", // 検索ボックスのプレースホルダー
+        "not_found" => "新着情報は見つかりませんでした", // 検索結果なし
+        "not_found_in_trash" => "ゴミ箱に新着情報はありません", // ゴミ箱
+        "parent_item_colon" => "親新着情報:", // 階層がある場合（この場合は不要かもしれませんが念のため）
+        "all_items" => "新着情報一覧", // 一覧画面のメニュータイトル
+        "archives" => "新着情報アーカイブ", // アーカイブページのタイトル
+        "attributes" => "新着情報の属性", // 属性（順序など）
+        "insert_into_item" => "新着情報に挿入", // メディア挿入時のテキスト
+        "uploaded_to_this_item" => "この新着情報にアップロード", // メディアアップロード時のテキスト
+        "filter_items_list" => "新着情報をフィルター", // リストフィルタリング
+        "items_list_navigation" => "新着情報リストナビゲーション", // リストナビゲーション
+        "items_list" => "新着情報リスト", // リストタイトル
+        "item_published" => "新着情報を公開しました。", // 公開時メッセージ
+        "item_published_privately" => "新着情報を非公開で公開しました。", // 非公開公開時
+        "item_reverted_to_draft" => "新着情報を下書きに戻しました。", // 下書きに戻した時
+        "item_scheduled" => "新着情報を予約しました。", // 予約時
+        "item_updated" => "新着情報を更新しました。", // 更新時
     ];
     $args = [
         "label" => "新着情報",
@@ -92,7 +118,7 @@ function ut_taxes_news_cat() {
         "labels" => $labels,
         "public" => true,
         "publicly_queryable" => true,
-        "hierarchical" => false,
+        "hierarchical" => true,
         "show_ui" => true,
         "show_in_menu" => true,
         "show_in_nav_menus" => true,
@@ -119,6 +145,29 @@ function ut_cpts_works() {
     $labels = [
         "name" => "施工実績",
         "singular_name" => "施工実績",
+        "add_new" => "施工実績を追加", // 「+ 新規追加」ボタンのテキスト
+        "add_new_item" => "施工実績を追加", // 新規投稿ページのタイトル
+        "edit_item" => "施工実績を編集", // 編集ページのタイトル
+        "new_item" => "新しい施工実績", // 新規追加後のメッセージ
+        "view_item" => "施工実績を表示", // 投稿表示リンク
+        "view_items" => "施工実績を表示", // 複数表示時のリンク
+        "search_items" => "施工実績を検索", // 検索ボックスのプレースホルダー
+        "not_found" => "施工実績は見つかりませんでした", // 検索結果なし
+        "not_found_in_trash" => "ゴミ箱に施工実績はありません", // ゴミ箱
+        "parent_item_colon" => "親施工実績:", // 階層がある場合（この場合は不要かもしれませんが念のため）
+        "all_items" => "施工実績一覧", // 一覧画面のメニュータイトル
+        "archives" => "施工実績アーカイブ", // アーカイブページのタイトル
+        "attributes" => "施工実績の属性", // 属性（順序など）
+        "insert_into_item" => "施工実績に挿入", // メディア挿入時のテキスト
+        "uploaded_to_this_item" => "この施工実績にアップロード", // メディアアップロード時のテキスト
+        "filter_items_list" => "施工実績をフィルター", // リストフィルタリング
+        "items_list_navigation" => "施工実績リストナビゲーション", // リストナビゲーション
+        "items_list" => "施工実績リスト", // リストタイトル
+        "item_published" => "施工実績を公開しました。", // 公開時メッセージ
+        "item_published_privately" => "施工実績を非公開で公開しました。", // 非公開公開時
+        "item_reverted_to_draft" => "施工実績を下書きに戻しました。", // 下書きに戻した時
+        "item_scheduled" => "施工実績を予約しました。", // 予約時
+        "item_updated" => "施工実績を更新しました。", // 更新時
     ];
     $args = [
         "label" => "施工実績",
@@ -165,7 +214,7 @@ function ut_taxes_works_cat() {
         "labels" => $labels,
         "public" => true,
         "publicly_queryable" => true,
-        "hierarchical" => false,
+        "hierarchical" => true,
         "show_ui" => true,
         "show_in_menu" => true,
         "show_in_nav_menus" => true,

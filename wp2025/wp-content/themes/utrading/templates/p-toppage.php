@@ -62,7 +62,7 @@ get_header();
                                 </picture>
                             </div>
                             <div class="col-12 col-md-6 mt-3 mt-md-0">
-                                <p class="lead_text">ここに文章を入力します。ここに文章を入力します。ここに文章を入力します。ここに文章を入力します。ここに文章を入力します。ここに文章を入力します。ここに文章を入力します。</p>
+                                <p class="lead_text">購入から整備・車検、万が一の事故まで全てお任せください！あなたのカーライフをサポートしていきます♪万が一の事故や故障。誰に相談すればいいかわからない。そんな時はGarage　Houseを頼ってください。レッカーから板金修理・車両のご提案まですべてお任せください！</p>
                             </div>
                         </div>
                     </div>
@@ -224,10 +224,10 @@ get_header();
             <div class="page-footer">
                 <div class="row justify-content-center gap-3">
                     <div class="col-12 col-md-5">
-                        <a href="#" target="_blank" class="ut_banner">カーセンサー</a>
+                        <a href="https://www.carsensor.net/shop/hokkaido/328898001/?BKKN=AU6131976518" target="_blank" class="ut_banner">カーセンサー</a>
                     </div>
                     <div class="col-12 col-md-5">
-                        <a href="#" target="_blank" class="ut_banner">グーネット</a>
+                        <a href="https://www.goo-net.com/usedcar_shop/0303810/detail.html" target="_blank" class="ut_banner">グーネット</a>
                     </div>
                 </div>
             </div>

@@ -81,8 +81,8 @@ if ( ! defined( 'ABSPATH' ) ) {
                             <p class="footer_information_compamy_address">〒007-0890 北海道札幌市東区中沼町80-9</p>
                             <p cclass="footer_information_company_tel">TEL:011-788-9483</p>
                             <p cclass="footer_information_company_fax">FAX:011-788-9484</p>
-                            <p cclass="footer_information_company_pr"><a href="#" target="_blank" class="icon_blank">カーセンサー</a></p>
-                            <p cclass="footer_information_company_pr"><a href="#" target="_blank" class="icon_blank">グーネット</a></p>
+                            <p cclass="footer_information_company_pr"><a href="https://www.carsensor.net/shop/hokkaido/328898001/?BKKN=AU6131976518" target="_blank" class="icon_blank">カーセンサー</a></p>
+                            <p cclass="footer_information_company_pr"><a href="https://www.goo-net.com/usedcar_shop/0303810/detail.html" target="_blank" class="icon_blank">グーネット</a></p>
                             <ul class="ut_fsns_list">
                                 <li class="ut_fsns_item">
                                     <a href="#">
