@@ -76,10 +76,8 @@ get_header(); ?>
                         </div>
                         <div class="col-12 col-md-8 mt-3 mt-md-0">
                             <a href="<?php the_permalink(); ?>">
-                                <h3><?php the_title(); ?></h3>
-                                <div>
-                                    <?php the_excerpt(); ?>
-                                </div>
+                                <h3 class="archive-title"><?php the_title(); ?></h3>
+                                <p class="archive-excerpt"><?php echo wp_trim_words( get_the_excerpt(), 100, ' &hellip; <span class="more-text">[more]</span>' ); ?></p>
                             </a>
                         </div>
                     </div>

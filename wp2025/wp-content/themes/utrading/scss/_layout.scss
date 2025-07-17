@@ -129,6 +129,12 @@ html{
     a{
         color: var(--ut-black);
     }
+
+    .archive-excerpt{
+        .more-text {
+            font-weight: bold;
+        }
+    }
 }
 
 

@@ -97,7 +97,7 @@ function ut_cpts_news() {
         "can_export" => false,
         "rewrite" => [ "slug" => "news", "with_front" => true ],
         "query_var" => true,
-        "supports" => [ "title", "editor", "thumbnail" ],
+        "supports" => [ "title", "editor", "thumbnail", "excerpt" ],
         "show_in_graphql" => false,
     ];
     register_post_type( "news", $args );
@@ -192,7 +192,7 @@ function ut_cpts_works() {
         "can_export" => false,
         "rewrite" => [ "slug" => "works", "with_front" => true ],
         "query_var" => true,
-        "supports" => [ "title", "editor", "thumbnail" ],
+        "supports" => [ "title", "editor", "thumbnail", "excerpt" ],
         "show_in_graphql" => false,
     ];
     register_post_type( "works", $args );

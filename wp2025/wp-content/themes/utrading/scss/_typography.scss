@@ -23,6 +23,15 @@ h2{
     }
 }
 
+h3{
+    margin: 20px 0 10px;
+    padding: 0 0 10px;
+    font-size: 1.47rem;
+    text-decoration: underline;
+    text-underline-offset: 8px;
+    position: relative;
+}
+
 a{
     text-decoration: none;
     transition: opacity 0.3s ease;

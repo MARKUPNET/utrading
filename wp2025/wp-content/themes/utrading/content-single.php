@@ -34,6 +34,23 @@ if ( ! defined( 'ABSPATH' ) ) {
         <h1 class="post-title"><?php the_title(); ?></h1>
 
         <?php
+        $thumbnail = get_the_post_thumbnail();
+        if( $thumbnail ):
+        ?>
+        <div class="post-thumbnail row justify-content-center mt-3">
+            <div class="col-12 col-md-6">
+            <?php the_post_thumbnail(); ?>
+            </div>
+        </div>
+        <?php endif; ?>
+
+        <?php if( has_excerpt() ): ?>
+        <div class="post-excerpt mt-3">
+            <?php the_excerpt(); ?>
+        </div>
+        <?php endif; ?>
+
+        <?php
         the_content('read more');
 
         wp_link_pages();

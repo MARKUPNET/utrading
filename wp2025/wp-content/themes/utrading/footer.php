@@ -25,24 +25,24 @@ if ( ! defined( 'ABSPATH' ) ) {
                                         <a href="<?php echo home_url('/service'); ?>"><span class="ja">事業案内</span></a>
                                         <ul class="ut_fmenu_list_sub">
                                             <li class="ut_fmenu_item_sub">
-                                                <a href="<?php echo home_url('/service/#a1'); ?>"><span class="ja">板金塗装</span></a>
+                                                <a href="<?php echo home_url('/service/#service_01'); ?>"><span class="ja">中古車販売</span></a>
                                             </li>
                                             <li class="ut_fmenu_item_sub">
-                                                <a href="<?php echo home_url('/service/#a2'); ?>"><span class="ja">車検・点検</span></a>
+                                                <a href="<?php echo home_url('/service/#service_02'); ?>"><span class="ja">自動車整備・車検・点検</span></a>
                                             </li>
                                             <li class="ut_fmenu_item_sub">
-                                                <a href="<?php echo home_url('/service/#a3'); ?>"><span class="ja">新車・中古車販売</span></a>
+                                                <a href="<?php echo home_url('/service/#service_03'); ?>"><span class="ja">板金塗装</span></a>
                                             </li>
                                             <li class="ut_fmenu_item_sub">
-                                                <a href="<?php echo home_url('/service/#a4'); ?>"><span class="ja">ロードサービス</span></a>
+                                                <a href="<?php echo home_url('/service/#service_04'); ?>"><span class="ja">カスタム・ドレスアップ</span></a>
                                             </li>
                                             <li class="ut_fmenu_item_sub">
-                                                <a href="<?php echo home_url('/service/#a5'); ?>"><span class="ja">ガラスコーティング</span></a>
+                                                <a href="<?php echo home_url('/service/#service_05'); ?>"><span class="ja">車両買取り・下取り</span></a>
                                             </li>
                                         </ul>
                                     </li>
                                     <li class="ut_fmenu_item">
-                                        <a href="<?php echo home_url('/works'); ?>"><span class="ja">施工実績</span></a>
+                                        <a href="<?php echo home_url('/works_cat/tosou/'); ?>"><span class="ja">施工実績</span></a>
                                     </li>
                                 </ul>
                             </div>
@@ -52,10 +52,10 @@ if ( ! defined( 'ABSPATH' ) ) {
                                         <a href="<?php echo home_url('/company'); ?>"><span class="ja">会社案内</span></a>
                                         <ul class="ut_fmenu_list_sub">
                                             <li class="ut_fmenu_item_sub">
-                                                <a href="<?php echo home_url('/company/#message'); ?>"><span class="ja">ご挨拶</span></a>
+                                                <a href="<?php echo home_url('/company/#greetings'); ?>"><span class="ja">ご挨拶</span></a>
                                             </li>
                                             <li class="ut_fmenu_item_sub">
-                                                <a href="<?php echo home_url('/company/#profile'); ?>"><span class="ja">会社概要</span></a>
+                                                <a href="<?php echo home_url('/company/#company_profile'); ?>"><span class="ja">会社概要</span></a>
                                             </li>
                                             <li class="ut_fmenu_item_sub">
                                                 <a href="<?php echo home_url('/company/#access'); ?>"><span class="ja">アクセス</span></a>

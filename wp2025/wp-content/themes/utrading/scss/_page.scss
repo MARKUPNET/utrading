@@ -1,0 +1,62 @@
+.page{
+
+    h2{
+        padding-left: 50px;
+        border-left: 8px solid var(--ut-green);
+        position: relative;
+
+        &::before{
+            content: "";
+            display: block;
+            width: 32px;
+            height: 5px;
+            background-color: var(--ut-green);
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        &::after{
+            content: "";
+            display: block;
+            width: 25px;
+            height: calc(100% - 20px);
+            background-color: var(--ut-yellow);
+            position: absolute;
+            left: 7px;
+            bottom: 0;
+        }
+    }
+
+    h3{
+        margin: 0;
+        padding: 0 0 0 34px;
+        font-size: 1.47rem;
+        text-decoration: none;
+        position: relative;
+
+        &::before{
+            content: "";
+            display: block;
+            width: 20px;
+            height: 20px;
+            background-color: var(--ut-green);
+            border-radius: 50%;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        &::after{
+            content: "";
+            display: block;
+            width: 16px;
+            height: 16px;
+            background-color: rgba(234,156,37,0.6);
+            border-radius: 50%;
+            position: absolute;
+            left: 10px;
+            bottom: 0;
+        }
+    }
+}

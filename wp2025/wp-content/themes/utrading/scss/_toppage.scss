@@ -399,10 +399,15 @@
 
         h3{
             margin: 0;
+            padding: 0;
             width: 100%;
             font-size: 18px;
             font-weight: 700;
             text-align: center;
+
+            &::before, &::after{
+                content: none;
+            }
         }
     }
 }
@@ -414,6 +419,12 @@
 
         img{
             margin: 0;
+        }
+    }
+
+    &_excerpt{
+        .more-text {
+            font-weight: bold;
         }
     }
 }
