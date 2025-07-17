@@ -16,7 +16,7 @@
     padding: 20px 0;
     position: relative;
     @media screen and (min-width: 768px) {
-        padding: 40px 0;
+        padding: 80px 0;
     }
 
     &::after{
@@ -127,6 +127,24 @@
                 opacity: 1;
             }
         }
+    }
+}
+
+.ut_block_about,
+.ut_block_works,
+.ut_block_faq{
+
+    &:before{
+        content: "";
+        display: block;
+        width: 100vw;
+        height: 100%;
+        background-color: #eee;
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+        z-index: -1;
     }
 }
 
@@ -312,29 +330,6 @@
     &_text{
         display: block;
         padding-left: 10px;
-    }
-}
-
-.ut_block_about,
-.ut_block_works,
-.ut_block_faq{
-    padding: 20px 0;
-
-    &:before{
-        content: "";
-        display: block;
-        width: 100vw;
-        height: 100%;
-        background-color: #eee;
-        position: absolute;
-        left: 50%;
-        top: 0;
-        transform: translateX(-50%);
-        z-index: -1;
-    }
-
-    @media screen and (min-width: 768px) {
-        padding: 40px 0;
     }
 }
 
