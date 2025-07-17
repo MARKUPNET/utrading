@@ -69,7 +69,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                                 <a href="<?php echo home_url('/service'); ?>"><span class="ja">事業案内</span><span class="en">Service</span></a>
                             </li>
                             <li class="ut_gmenu_item">
-                                <a href="<?php echo home_url('/works'); ?>"><span class="ja">施工実績</span><span class="en">Works</span></a>
+                                <a href="<?php echo home_url('/works_cat/tosou/'); ?>"><span class="ja">施工実績</span><span class="en">Works</span></a>
                             </li>
                             <li class="ut_gmenu_item">
                                 <a href="<?php echo home_url('/company'); ?>"><span class="ja">会社案内</span><span class="en">Company</span></a>
