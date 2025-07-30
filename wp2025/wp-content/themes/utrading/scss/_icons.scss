@@ -108,3 +108,57 @@ $icons: (
         border-width: 4px 3.5px 0px 3.5px;
     }
 }
+
+.iconPrev,
+.iconNext{
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: none;
+    background-color: #c8c8c8;
+    border-radius: 50%;
+    position: absolute;
+
+    &::before,
+    &::after{
+        content: "";
+        display: block;
+        width: 10px;
+        height: 1px;
+        background-color: #000;
+        position: absolute;
+        left: calc(50% - 5px);
+    }
+}
+
+.iconPrev{
+    left: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &::before{
+        transform: rotate(-45deg);
+        transform-origin: left bottom;
+    }
+
+    &::after{
+        transform: rotate(45deg);
+        transform-origin: left top;
+    }
+}
+
+.iconNext{
+    right: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &::before{
+        transform: rotate(45deg);
+        transform-origin: right top;
+    }
+
+    &::after{
+        transform: rotate(-45deg);
+        transform-origin: right bottom;
+    }
+}

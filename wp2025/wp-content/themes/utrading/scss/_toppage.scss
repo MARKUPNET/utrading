@@ -42,6 +42,7 @@
         }
 
         .en{
+            padding: 0 0 10px;
             font-family: $font-serif-jp;
             font-size: 24px;
             position: relative;
@@ -130,24 +131,6 @@
     }
 }
 
-.ut_block_about,
-.ut_block_works,
-.ut_block_faq{
-
-    &:before{
-        content: "";
-        display: block;
-        width: 100vw;
-        height: 100%;
-        background-color: #eee;
-        position: absolute;
-        left: 50%;
-        top: 0;
-        transform: translateX(-50%);
-        z-index: -1;
-    }
-}
-
 .ut_scroll{
     display: block;
     transition: all 1s ease;
@@ -224,13 +207,12 @@
 }
 
 .ut_banner{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: block;
     width: 100%;
-    height: 80px;
-    color: var(--ut-black);
-    background-color: var(--ut-lightgray);
+
+    &::after{
+        display: none;
+    }
 }
 
 .mainvisual_textwrapper{
@@ -251,7 +233,7 @@
     }
 }
 
-.news{
+.ut_news{
 
     &_list{
         margin: 0;
@@ -409,13 +391,56 @@
     }
 }
 
-.ut_works{
+.ut_blog{
 
     &_slider{
-        overflow: auto;
+        overflow-x: scroll;
 
         img{
             margin: 0;
+        }
+    }
+
+    &_slide_item{
+        a{
+            display: block;
+            width: 100%;
+            height: 100%;
+
+            .card{
+                height: 100%;
+                box-shadow: 3px 3px 6px #ccc;
+            }
+        }
+    }
+
+    &_excerpt{
+        .more-text {
+            font-weight: bold;
+        }
+    }
+}
+
+.ut_works{
+
+    &_slider{
+        overflow-x: scroll;
+
+        img{
+            margin: 0;
+        }
+    }
+
+    &_slide_item{
+        a{
+            display: block;
+            width: 100%;
+            height: 100%;
+
+            .card{
+                height: 100%;
+                box-shadow: 3px 3px 6px #ccc;
+            }
         }
     }
 
@@ -438,6 +463,7 @@
         width: 100%;
         color: var(--ut-green);
         text-align: center;
+        background-color: var(--ut-white);
         border: 1px solid var(--ut-green);
         border-radius: 6px;
         box-shadow: 3px 3px 6px #ccc;
@@ -522,5 +548,23 @@
                 font-weight: 700;
             }
         }
+    }
+}
+
+.ut_block_about,
+.ut_block_blog,
+.ut_block_company{
+
+    &:before{
+        content: "";
+        display: block;
+        width: 100vw;
+        height: 100%;
+        background-color: #eee;
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+        z-index: -1;
     }
 }

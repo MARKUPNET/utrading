@@ -20,10 +20,10 @@ get_header();
 
             <div class="page-content">
 
-                <section id="news" class="ut_block ut_block_news">
+                <section id="news" class="ut_block ut_block_news ut_news">
                     <h2 class="ut_block_title_h2 d-flex align-items-start flex-column"><span class="en">News</span><span class="ja">新着情報</span></h2>
                     <div class="ut_block_content">
-                        <ul class="news_list">
+                        <ul class="ut_news_list">
                             <?php
                             $args = [
                                 'post_type' => 'news',
@@ -33,17 +33,17 @@ get_header();
                             $loop = new WP_Query($args);
                             while($loop->have_posts()): $loop->the_post();
                             ?>
-                            <li class="news_item">
+                            <li class="ut_news_item">
                                 <a href="<?php the_permalink(); ?>">
-                                    <div class="news_meta">
-                                        <span class="news_date"><?php echo get_the_date(); ?></span>
+                                    <div class="ut_news_meta">
+                                        <span class="ut_news_date"><?php echo get_the_date(); ?></span>
                                         <?php
                                         $terms = get_the_terms( get_the_ID(), 'news_cat' );
                                         if ( $terms && ! is_wp_error( $terms ) ) : $term = array_shift( $terms ); // 最初のカテゴリーを取得 ?>
-                                        <span class="news_category <?php echo esc_attr( $term->slug ); ?>"><?php echo esc_html( $term->name ); ?></span>
+                                        <span class="ut_news_category <?php echo esc_attr( $term->slug ); ?>"><?php echo esc_html( $term->name ); ?></span>
                                         <?php endif; ?>
                                     </div>
-                                    <span class="news_text"><?php the_title(); ?></span>
+                                    <span class="ut_news_text"><?php the_title(); ?></span>
                                 </a>
                             </li>
                             <?php endwhile;?>
@@ -112,7 +112,52 @@ get_header();
                     </div>
                 </section>
 
-                <section class="ut_block ut_block_works ut_works">
+                <section id="blog" class="ut_block ut_block_blog ut_blog">
+                    <h2 class="ut_block_title_h2 d-flex align-items-start flex-column"><span class="en">Blog</span><span class="ja">ブログ</span></h2>
+                    <div class="ut_block_content">
+                        <div class="ut_blog_slider">
+                            <div class="d-flex gap-3">
+                                <?php
+                                $args = [
+                                    'post_type' => 'post',
+                                    'post_status' => 'publish',
+                                    'posts_per_page' => 5
+                                ];
+                                $loop = new WP_Query($args);
+                                while($loop->have_posts()): $loop->the_post();
+                                ?>
+                                <div class="col-12 col-md-4 ut_blog_slide_item">
+                                    <a href="<?php the_permalink(); ?>">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <?php
+                                                if(get_the_post_thumbnail() == null){
+                                                    $thumbnail = sprintf('<img src="%s" alt="">', get_template_directory_uri() . '/images/no-image.jpg');
+                                                }else{
+                                                    $thumbnail = get_the_post_thumbnail();
+                                                }
+                                                echo $thumbnail;
+                                                ?>
+                                            </div>
+                                            <div class="card-body">
+                                                <h3 class="ut_blog_title"><?php the_title(); ?></h3>
+                                                <p class="ut_blog_excerpt mt-3"><?php echo wp_trim_words( get_the_excerpt(), 60, ' &hellip; <span class="more-text">[more]</span>' ); ?></p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <?php
+                                endwhile;
+                                wp_reset_postdata();
+                                ?>
+                            </div>
+                            <button type="button" class="ut_btn_arrow iconPrev"></button>
+                            <button type="button" class="ut_btn_arrow iconNext"></button>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="works" class="ut_block ut_block_works ut_works">
                     <h2 class="ut_block_title_h2 d-flex align-items-start flex-column"><span class="en">Works</span><span class="ja">施工実績</span></h2>
                     <div class="ut_block_content">
                         <div class="ut_works_slider">
@@ -148,6 +193,8 @@ get_header();
                                 </div>
                                 <?php endwhile; ?>
                             </div>
+                            <button type="button" class="ut_btn_arrow iconPrev"></button>
+                            <button type="button" class="ut_btn_arrow iconNext"></button>
                         </div>
                     </div>
                 </section>
@@ -202,7 +249,7 @@ get_header();
                     </div>
                 </section>
 
-                <section class="ut_block menu_001">
+                <section id="contact" class="ut_block menu_001">
                     <h2 class="ut_block_title_h2 d-flex align-items-start flex-column"><span class="en">Contact us</span><span class="ja">お問い合わせ</span></h2>
                     <div class="ut_block_content">
                         <div>
@@ -227,7 +274,9 @@ get_header();
             <div class="page-footer">
                 <div class="row justify-content-center gap-3">
                     <div class="col-12 col-md-5">
-                        <a href="https://www.carsensor.net/shop/hokkaido/328898001/?BKKN=AU6131976518" target="_blank" class="ut_banner">カーセンサー</a>
+                        <a href="https://www.carsensor.net/shop/hokkaido/328898001/?BKKN=AU6131976518" target="_blank" class="ut_banner">
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/ut_banner_carcensor.jpg" alt="カーセンサー">
+                        </a>
                     </div>
                     <div class="col-12 col-md-5">
                         <a href="https://www.goo-net.com/usedcar_shop/0303810/detail.html" target="_blank" class="ut_banner">グーネット</a>
