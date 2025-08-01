@@ -102,8 +102,12 @@ html{
 
 .entry-footer,
 .page-footer{
-    margin: 20px 0;
-    padding: 0 20px;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 1040px;
+    @media screen and (min-width: 768px) {
+        padding: 80px 20px;
+    }
 }
 
 .entry-title,

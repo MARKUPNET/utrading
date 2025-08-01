@@ -112,10 +112,9 @@ $icons: (
 .iconPrev,
 .iconNext{
     display: block;
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 100px;
     background: none;
-    background-color: #c8c8c8;
     border-radius: 50%;
     position: absolute;
 
@@ -123,11 +122,11 @@ $icons: (
     &::after{
         content: "";
         display: block;
-        width: 10px;
+        width: 30px;
         height: 1px;
         background-color: #000;
         position: absolute;
-        left: calc(50% - 5px);
+        left: calc(50% - 15px);
     }
 }
 
@@ -137,12 +136,12 @@ $icons: (
     transform: translateY(-50%);
 
     &::before{
-        transform: rotate(-45deg);
+        transform: rotate(-60deg);
         transform-origin: left bottom;
     }
 
     &::after{
-        transform: rotate(45deg);
+        transform: rotate(60deg);
         transform-origin: left top;
     }
 }
@@ -153,12 +152,12 @@ $icons: (
     transform: translateY(-50%);
 
     &::before{
-        transform: rotate(45deg);
+        transform: rotate(60deg);
         transform-origin: right top;
     }
 
     &::after{
-        transform: rotate(-45deg);
+        transform: rotate(-60deg);
         transform-origin: right bottom;
     }
 }

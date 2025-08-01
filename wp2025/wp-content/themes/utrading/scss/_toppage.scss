@@ -23,14 +23,16 @@
         content: "";
         display: block;
         width: 100vw;
-        height: 1px;
-        border-top: 1px solid var(--ut-green);
+        color: #ffe9e9;
+        font-size: 114px;
+        font-weight: 700;
+        text-align: right;
         position: absolute;
         left: 50%;
-        top: 0;
-        opacity: 0;
-        transform: translateX(-100%);
-        transition: all 1s ease;
+        bottom: 0;
+        transform: translateX(-50vw);
+        z-index: -1;
+        opacity: 0.2;
     }
 
     &_title_h2{
@@ -103,11 +105,6 @@
     }
 
     &.active{
-
-        &::after{
-            transform: translateX(-50%);
-            opacity: 1;
-        }
 
         .ut_block_title_h2{
             .en{
@@ -316,6 +313,10 @@
 }
 
 .ut_about{
+    &::after{
+        content: "About";
+    }
+
     picture{
         @media screen and (min-width: 768px) {
             position: relative;
@@ -338,6 +339,9 @@
 }
 
 .ut_service{
+    &::after{
+        content: "Service";
+    }
 
     &_list{
         padding: 20px;
@@ -393,15 +397,30 @@
 
 .ut_blog{
 
+    &::after{
+        content: "Blog";
+    }
+
     &_slider{
-        overflow-x: scroll;
+        padding: 0 20px;
+        @media screen and (min-width: 768px) {
+            padding: 0;
+        }
 
         img{
             margin: 0;
         }
     }
 
-    &_slide_item{
+    &_slider_list{
+        overflow-x: scroll;
+
+        &::-webkit-scrollbar {
+            display: none; /* Chrome, Safari, Edge (WebKit) */
+        }
+    }
+
+    &_slider_item{
         a{
             display: block;
             width: 100%;
@@ -422,16 +441,30 @@
 }
 
 .ut_works{
+    &::after{
+        content: "Works";
+    }
 
     &_slider{
-        overflow-x: scroll;
+        padding: 0 20px;
+        @media screen and (min-width: 768px) {
+            padding: 0;
+        }
 
         img{
             margin: 0;
         }
     }
 
-    &_slide_item{
+    &_slider_list{
+        overflow-x: scroll;
+
+        &::-webkit-scrollbar {
+            display: none; /* Chrome, Safari, Edge (WebKit) */
+        }
+    }
+
+    &_slider_item{
         a{
             display: block;
             width: 100%;
@@ -452,6 +485,9 @@
 }
 
 .ut_company{
+    &::after{
+        content: "Company";
+    }
 
     &_item{
         display: flex;
@@ -522,6 +558,9 @@
 
 .ut_faq{
 
+    &::after{
+        content: "Faq";
+    }
 
     &_item{
 
@@ -551,9 +590,16 @@
     }
 }
 
+.ut_contact{
+    &::after{
+        content: "Contact";
+    }
+}
+
 .ut_block_about,
 .ut_block_blog,
-.ut_block_company{
+.ut_block_company,
+.ut_block_contact{
 
     &:before{
         content: "";
@@ -561,6 +607,7 @@
         width: 100vw;
         height: 100%;
         background-color: #eee;
+        background: linear-gradient(45deg,  #ffffff 0%,#a1cab7 100%);
         position: absolute;
         left: 50%;
         top: 0;

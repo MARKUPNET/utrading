@@ -116,7 +116,7 @@ get_header();
                     <h2 class="ut_block_title_h2 d-flex align-items-start flex-column"><span class="en">Blog</span><span class="ja">ブログ</span></h2>
                     <div class="ut_block_content">
                         <div class="ut_blog_slider">
-                            <div class="d-flex gap-3">
+                            <div class="d-flex gap-3 ut_blog_slider_list">
                                 <?php
                                 $args = [
                                     'post_type' => 'post',
@@ -126,7 +126,7 @@ get_header();
                                 $loop = new WP_Query($args);
                                 while($loop->have_posts()): $loop->the_post();
                                 ?>
-                                <div class="col-12 col-md-4 ut_blog_slide_item">
+                                <div class="col-12 col-md-4 ut_blog_slider_item">
                                     <a href="<?php the_permalink(); ?>">
                                         <div class="card">
                                             <div class="card-header">
@@ -151,8 +151,8 @@ get_header();
                                 wp_reset_postdata();
                                 ?>
                             </div>
-                            <button type="button" class="ut_btn_arrow iconPrev"></button>
-                            <button type="button" class="ut_btn_arrow iconNext"></button>
+                            <button type="button" class="ut_btn_arrow iconPrev ut_blog_prev"></button>
+                            <button type="button" class="ut_btn_arrow iconNext ut_blog_next"></button>
                         </div>
                     </div>
                 </section>
@@ -161,7 +161,7 @@ get_header();
                     <h2 class="ut_block_title_h2 d-flex align-items-start flex-column"><span class="en">Works</span><span class="ja">施工実績</span></h2>
                     <div class="ut_block_content">
                         <div class="ut_works_slider">
-                            <div class="d-flex gap-3">
+                            <div class="d-flex gap-3 ut_works_slider_list">
                                 <?php
                                 $args = [
                                     'post_type' => 'works',
@@ -171,7 +171,7 @@ get_header();
                                 $loop = new WP_Query($args);
                                 while($loop->have_posts()): $loop->the_post();
                                 ?>
-                                <div class="col-12 col-md-4 ut_works_slide_item">
+                                <div class="col-12 col-md-4 ut_works_slider_item">
                                     <a href="<?php the_permalink(); ?>">
                                         <div class="card">
                                             <div class="card-header">
@@ -193,8 +193,8 @@ get_header();
                                 </div>
                                 <?php endwhile; ?>
                             </div>
-                            <button type="button" class="ut_btn_arrow iconPrev"></button>
-                            <button type="button" class="ut_btn_arrow iconNext"></button>
+                            <button type="button" class="ut_btn_arrow iconPrev ut_works_prev"></button>
+                            <button type="button" class="ut_btn_arrow iconNext ut_works_next"></button>
                         </div>
                     </div>
                 </section>
@@ -249,7 +249,7 @@ get_header();
                     </div>
                 </section>
 
-                <section id="contact" class="ut_block menu_001">
+                <section id="contact" class="ut_block menu_001 ut_block_contact ut_contact">
                     <h2 class="ut_block_title_h2 d-flex align-items-start flex-column"><span class="en">Contact us</span><span class="ja">お問い合わせ</span></h2>
                     <div class="ut_block_content">
                         <div>
@@ -275,11 +275,13 @@ get_header();
                 <div class="row justify-content-center gap-3">
                     <div class="col-12 col-md-5">
                         <a href="https://www.carsensor.net/shop/hokkaido/328898001/?BKKN=AU6131976518" target="_blank" class="ut_banner">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/ut_banner_carcensor.jpg" alt="カーセンサー">
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/ut_banner_carcensor.jpg" alt="カーセンサー" class="m-0">
                         </a>
                     </div>
                     <div class="col-12 col-md-5">
-                        <a href="https://www.goo-net.com/usedcar_shop/0303810/detail.html" target="_blank" class="ut_banner">グーネット</a>
+                        <a href="https://www.goo-net.com/usedcar_shop/0303810/detail.html" target="_blank" class="ut_banner">
+                            グーネット
+                        </a>
                     </div>
                 </div>
             </div>
